@@ -21,8 +21,8 @@ body {
   color: #33485e;
 }
 
-/* this is changing all h2, which are only for my section titles */
-h2 {
+/* go, go uppercase */
+.uppercase {
   text-transform: uppercase;
   font-size: 1.5em;
   background-color: #33485e;
@@ -31,19 +31,19 @@ h2 {
 }
 
 /* this is changing job titles */
-h3 {
+.font-700 {
   font-weight: 700;
   font-size: 1.5em;
 }
 
 /* this is changing job organizatoin */
-h4 {
+.font-400 {
   font-weight: 400;
   font-size: 1.5em;
 }
 
 /* this is changing job dates */
-h5 {
+.font-400-italic {
   font-weight: 400;
   font-size: 1.5em;
   font-style: italic;
