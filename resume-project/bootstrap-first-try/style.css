@@ -5,6 +5,14 @@ body {
   color: #444;
 }
 
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  #sticky { display: block; }  /* show it on small screens */
+}
+
+@media screen and (min-width: 401px) and (max-width: 1024px) {
+  #sticky { display: none; }   /* hide it elsewhere */
+}
+
 /* go, go uppercase */
 .secton-header {
   text-transform: uppercase;
@@ -84,45 +92,20 @@ li {
   margin-top: 40px;
 }
 
-#contianer{
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding-bottom: 50px;
-}
 
 #title {
-  font-weight: 700;
-  width: 60%;
-  min-width: 300px;
-  margin-top: 20px;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  text-transform: uppercase;
-  font-size: 1.5em;
-  color: #33485e;
-  text-align: center;
+
 }
 
 #name {
-  font-size: 3em;
-  color: #33485e;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 700;
-  border-bottom-style: solid;
-  border-bottom-color: 33485e;
-  width: 60%;
-  min-width: 300px;
-  margin: 0 auto;
+
 }
 
 /* setting the overall dimensions */
 #container {
   width: 100%;
-  max-width: 960px;
   margin: auto;
+  max-width: 960px;
   padding-bottom: 50px;
 }
 
