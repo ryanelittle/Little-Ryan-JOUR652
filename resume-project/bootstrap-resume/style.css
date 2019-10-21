@@ -24,6 +24,7 @@ a.link:active{
    color: inherit;
 }
 
+
 /* this is the name container */
 .whoami {
   padding: 2em 0 0 0;
@@ -43,15 +44,24 @@ a.link:active{
 
 /* this is the styling for who I am */
 .whois {
-  font-family: 'Gothic A1', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   font-size: 1.25em;
   margin-bottom: .10em;
   font-weight: lighter;
 }
 
+/* more squares */
 ul {
   list-style-type: square;
+}
 
+.button {
+  margin: auto;
+  padding: 1em 2 1em 2em;
+  background-color: black;
+  color: white;
+  border-radius: 10%;
+  float: right;
 }
 
 /* controling the icons on the left column */
@@ -72,6 +82,64 @@ ul {
   display: none;
 }
 
+.rightbar {
+  display: none;
+}
+
+.rightnav {
+  width: 100%;
+}
+
+.navbutton {
+  float: right;
+  color: white;
+}
+
+.header{
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.15em;
+  font-weight: lighter;
+  text-align: left;
+  display: inline;
+  float: left;
+  line-height: 1em;
+  font-weight: 700;
+}
+
+
+.title{
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.15em;
+  font-weight: lighter;
+  text-align: left;
+  display: inline;
+  float: left;
+  line-height: 1em;
+  font-weight: 700;
+}
+
+/* don't need anymore .org{
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.25em;
+  font-weight: lighter;
+}
+*/
+
+.date {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1em;
+  font-weight: lighter;
+  text-align: right;
+  font-style: italic;
+  display: inline;
+  float: right;
+  line-height: 1.15em;
+
+
+}
+
+
+
 #headshot {
   width: 10em;
   border-radius: 50%;
@@ -88,9 +156,10 @@ ul {
 @media screen and (max-width: 768px) {
   #headshot { display: none; }
   #rightcolumn { margin: 0 18px 0 18px; }
-  .whois { display: inline; }
+  .whois {text-align: center;  width: 100%; margin: 0 auto; display: inline;}
   .name { display: none; }
   .leftlist {display: inline; float: right;}
   .leftskills { display: none; }
-  .rightskills {display: inline; }
+  .rightskills {display: inline; width: 22em;}
+  .rightbar {display: inline; padding-top: 4em;}
 }
