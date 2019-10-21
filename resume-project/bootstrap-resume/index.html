@@ -17,11 +17,11 @@
   </head>
 
   <body>
-    <!--- big splash jumbotron with background and name --->
-    <div class=jumbotron>
-    </div>
-    <!--- this is my first container --->
     <div class=container>
+    <!--- big splash background and name --->
+      <div class=row pt-1>
+      <img src="images/ryan-e-little-banner.jpg" class="rounded img-fluid mt-1" alt="Ryan E. Little's banner.">
+    </div>
     <div class=row>
       <!--- this is the left column that will stack on top and stick on mobile --->
       <div class="col-md-4 sticky-top">
@@ -29,14 +29,17 @@
         <div class="container sticky-top">
           <!---  using new grid to offset left column from right column --->
           <div class="whoami">
-            <img src="ryan-little-small.jpg" id=headshot />
+            <img src="images/ryan-little-small.jpg" alt="A picture of Ryan E. Little." id=headshot />
             <div class=name>Ryan E. Little</div>
             <div class=whois>Investigator, Storyteller, Journalist</div>
             <div class=leftlist><a href="mailto:ryanerinlittle@gmail.com" class="link" alt="E-mail Ryan" ><i class="far fa-envelope"></i></a>
             <a href="https://twitter.com/ryanlittlee" class="link" alt="View Ryan's Twitter Page" target="_blank" ><i class="fab fa-twitter"></i></a>
             <a href="https://www.instagram.com/ryanlittlee/" class="link" alt="View Ryan's Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/ryanelittle/" class="link" alt="View Ryan's GitHub Repository" target="_blank"><i class="fab fa-github"></i></a>
-            <img class="leftskills" src="skills-left.jpg" alt="Ryan's Skills" hspace="0">
+            <div class="card bg-light mb-3 mt-3 leftskillcard">
+              <div class="card-header header">SKILLS</div>
+            <img class="leftskills" src="images/skills-left-gray.png" alt="Ryan's Skills" hspace="0">
+            </div>
             </div>
           </div>
         </div>
@@ -47,24 +50,26 @@
         <div id="rightcolumn">
           <!--- building a useless nav bar that destroys my design but meets the requirements of the project --->
           <div class="rightnav">
-            <nav class="navbar navbar-light bg-secondary">
-              <a class="navbar-brand" href="#">Navigation</a>
-              <a href="#education" class="link navbutton"><i class="fas fa-university"></i></a>
-              <a href="#awards" class="link navbutton"><i class="fas fa-award"></i></a>
-              <a href="#otherexperience" class="link navbutton"><i class="fas fa-utensils"></i></a>
+            <nav class="navbar navbar-light bg-secondary rounded p-10 mb-3 mt-2">
+              <a class="navbar-brand"><div class=navbutton>Navigation</div></a>
+              <a href="#education" class="link" alt="Click here to jump to10Ryan's education."><div class=navbutton><i class="fas fa-university"></div></i></a>
+              <a href="#awards" class="link" alt="Click here to jump to Ryan's awards."><div class=navbutton><i class="fas fa-award"></div></i></a>
+              <a href="#otherexperience" class="link" alt="Click here to jump to Ryan's other experience."><div class=navbutton><i class="fas fa-utensils"></div></i></a>
           </div>
 
           <div class="card bg-light mb-3">
-            <div class="card-header"><div class=title>Grad Assistant at Merrill College of Journalism</div> <div class="date">Aug. 2019 - Present</div></div>
-            <div class=card-body><p>Teaching Assistant to Deborah Nelson, Associate Professor of Investigative Journalism, overseeing ethics curriculum in a core elective for non-journalism majors</p>
-            <p>Team leader of a national project in Nelson’s investigative journalism class and data team liaison</p>
-            <p>Other duties include grading, leading ethics discussions about journalism and social media, tracking student performance and intervening when students fall behind</p>
+            <div class="card-header"><div class=title>Grad Asst. at Merrill College of Journalism</div> <div class="date">Aug. 2019 - Present</div></div>
+            <div class=card-body><p>Teaching Assistant to Deborah Nelson, Associate Professor of Investigative Journalism, overseeing ethics curriculum in a core elective for non-journalism majors. Other duties include:</p>
+              <ul>
+                <li>Team leader of a national project in Nelson’s investigative journalism class and data team liaison</li>
+                <li>Other duties include grading, leading ethics discussions about journalism and social media, tracking student performance and intervening when students fall behind</li>
+              </ul>
             </div>
             </div>
 
           <div class="card bg-light mb-3">
             <div class="card-header"><div class="title">Reporter at The Ledger</div><div class="date">June 2011 - July 2014</div></div>
-            <div class=card-body><p>Primarily covered two largest city halls in the county. First reported on Winter Haven, Fla. before promotion to Lakeland. Wrote enterprise and breaking news stories with enormous impact. Produced multimedia projects. Live-tweeted commission meetings and other events. Covered 2012 Republican National Convention. Circulation of 40,000 and 60,000. Impact included:</p>
+            <div class=card-body><p>Primarily covered two largest city halls in the county. First reported on Winter Haven, Fla. before promotion to Lakeland. Wrote enterprise and breaking news stories with enormous impact. Produced multimedia projects. Live-tweeted commission meetings and other events. Covered 2012 Republican National Convention. Impact included:</p>
             <ul>
               <li>Termination of a planned $150 million mixed-use development set for the city’s premier recreational site that also sank a plan to relocate the city swimming pool to a brownfield.</li>
               <li>Resignations of three city officials – including a commissioner – and prompted a state attorney’s office investigation that led to changes in the creation of city records.</li>
@@ -89,17 +94,17 @@
           <div class="card-header"><div class=title><a name="education">EDUCATION</div></div></a>
             <div class="card-body"
             <div class=container>
-              <div class="row p-0">
-                <div class="col-md-6 p-0">
-                  <div>Philip Merrill College of Journalism</div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class=font-weight-bold>Philip Merrill College of Journalism</div>
                   <div>University of Maryland</div>
                   <div>College Park, Md.</div>
                   <div>Master of Journalism</div>
                   <div>Data/Investigative Focus</div>
                   <div>Expected Graduation, Dec. 2020</div>
                 </div>
-                <div class="col-md-6 p-0">
-                  <div>Nicholson School of Communication and Media</div>
+                <div class="col-md-6">
+                  <div class=font-weight-bold>Nicholson School of Communication and Media</div>
                   <div>University of Central Florida</div>
                   <div>Orlando, Fla.</div>
                   <div>Bachelor of Arts</div>
@@ -113,35 +118,35 @@
 
           <div class="card bg-light mb-3">
             <div class="card-header"><div class=title><a name="awards">AWARDS</div></div></a>
-            <ul>
-              <li>2014 Joseph L. Brechner Freedom of Information Award</li>
-              <li>2013 FSNE First Place in Feature and Arts Writing, Division C</li>
-              <li>2013 SPJ Sunshine State Awards, First Place for Presidential Coverage</li>
-              <li>2012 FSNE First Place in Use of Social Media in Breaking News, Division C</li>
-            </ul>
+            <div class=card-body>
+              <div>2014 Joseph L. Brechner Freedom of Information Award</div>
+              <div>2013 FSNE First Place in Feature and Arts Writing, Division C</div>
+              <div>2013 SPJ Sunshine State Awards, First Place for Presidential Coverage</div>
+              <div>2012 FSNE First Place in Use of Social Media in Breaking News, <br>Division C</div>
+            </div>
           </div>
 
           <div class="rightskills">
             <div class="card bg-light mb-3">
               <div class="card-header header">SKILLS</div>
-              <img class="rightskills" src="skills-left.jpg" alt="Ryan's Skills">
+              <img class="rightskills" src="images/skills-left-gray.png" alt="Ryan's Skills">
             </div>
           </div>
 
           <div class="card bg-light mb-3">
-            <a name="otherexperience"><div class="card-header header">Other Experience</div></a>
-            <div class=title>General Manager, Server</div>
-            <div class=org>High-End D.C. Restaurants</div>
-            <div class=date>2014 - 2019</div>
-            <p>Worked as a server and eventually a general manager at Mintwood Place and others</p>
-            <p>Managed staff, payroll, inventory, social media, wine list; once had to apologize to a guest in front of Washington Post food critic</p>
+            <div class="card-header"><div class=title><a name="otherexperience">Other Experience</div></div></a>
+            <div class=card-body>
+            <div class=title>General Manager, Server in High-End D.C. Restaurants</div><br>
+            <p>Worked as a server and eventually a general manager at Mintwood Place and others between 2014 and 2019.</p>
+            <p>Managed staff, payroll, inventory, social media, wine list; once had to apologize to a guest in front of Washington Post food critic.</p>
+            </div>
           </div>
-
-
         </div>
       </div>
       </div>
-
     </div>
   </body>
+  <footer>
+    <div class="col-12 feet rounded font-weight-bold"<p>Design and code by Ryan E. Little. © 2019<p>
+  </footer>
 </html>
