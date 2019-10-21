@@ -23,16 +23,18 @@
 
   <body>
     <div class=container>
+
     <!--- big splash background and name --->
       <div class=row pt-1>
       <img src="images/ryan-e-little-banner.jpg" class="rounded img-fluid mt-1" alt="Ryan E. Little's banner.">
     </div>
     <div class=row>
+
       <!--- this is the left column that will stack on top and stick on mobile --->
       <div class="col-md-4 sticky-top">
         <!--- making new container to force sticky-top --->
         <div class="container sticky-top">
-          <!---  using new grid to offset left column from right column --->
+          <!--- The "who am I" the user can't escape on desktop, shrinks big on mobile --->
           <div class="whoami">
             <img src="images/ryan-little-small.jpg" alt="A picture of Ryan E. Little." id=headshot />
             <div class=name>Ryan E. Little</div>
@@ -43,8 +45,10 @@
             <a href="https://github.com/ryanelittle/" class="link" alt="View Ryan's GitHub Repository" target="_blank"><i class="fab fa-github"></i></a>
             <div class="card bg-light mb-3 mt-3 leftskillcard">
               <div class="card-header header">SKILLS</div>
+            <!--- this card disapeers on mobile --->
             <img class="leftskills" src="images/skills-left-gray.png" alt="Ryan's Skills" hspace="0">
             </div>
+            <!--- annoying share codes for extra credit --->
             <div id="fb-root"></div>
             <script>(function(d, s, id) {
               var js, fjs = d.getElementsByTagName(s)[0];
@@ -70,9 +74,10 @@
           </div>
         </div>
       </div>
+
       <!--- this is the right column that will stack on the bottom on mobile --->
       <div class="col-md-8">
-        <!--- this is restricting the size to inside the stick-top --->
+        <!--- this is restricting the size to less than the sticky-top --->
         <div id="rightcolumn">
           <!--- building a useless nav bar that destroys my design but meets the requirements of the project --->
           <div class="rightnav">
@@ -83,6 +88,7 @@
               <a href="#otherexperience" class="link" alt="Click here to jump to Ryan's other experience."><div class=navbutton><i class="fas fa-utensils"></div></i></a>
           </div>
 
+          <!--- the first of many cards --->
           <div class="card bg-light mb-3">
             <div class="card-header"><div class=title>Grad Asst. at Merrill College of Journalism</div> <div class="date">Aug. 2019 - Present</div></div>
             <div class=card-body><p>Teaching Assistant to Deborah Nelson, Associate Professor of Investigative Journalism, overseeing ethics curriculum in a core elective for non-journalism majors. Other duties include:</p>
@@ -91,8 +97,9 @@
                 <li>Other duties include grading, leading ethics discussions about journalism and social media, tracking student performance and intervening when students fall behind</li>
               </ul>
             </div>
-            </div>
+          </div>
 
+          <!--- card two --->
           <div class="card bg-light mb-3">
             <div class="card-header"><div class="title">Reporter at The Ledger</div><div class="date">June 2011 - July 2014</div></div>
             <div class=card-body><p>Primarily covered two largest city halls in the county. First reported on Winter Haven, Fla. before promotion to Lakeland. Wrote enterprise and breaking news stories with enormous impact. Produced multimedia projects. Live-tweeted commission meetings and other events. Covered 2012 Republican National Convention. Impact included:</p>
@@ -103,23 +110,26 @@
               <li>Broke statewide news multiple times; feature story about an apartment complex in the median of a state road picked up by wire services and ran in many Florida newspapers.</li>
             </ul>
             </div>
-            </div>
+          </div>
 
-            <div class="card bg-light mb-3">
-              <div class="card-header"><div class="title">Business Intern at Orlando Sentinel</div><div class="date">Jan. 2011 - May 2011</div></div>
-              <div class=card-body><p>Covered Orlando businesses in the wake of the financial crisis. Most significant story about a shopping center owner who created new businesses to fill vacancies while trying to survive the Great Recession. It ran on the front-page. Worked only Mondays and Fridays with full-time studies and part-time job. Received perfect marks in review and created first intern beat book.</p></div>
-            </div>
+          <!--- card three --->
+          <div class="card bg-light mb-3">
+            <div class="card-header"><div class="title">Business Intern at Orlando Sentinel</div><div class="date">Jan. 2011 - May 2011</div></div>
+            <div class=card-body><p>Covered Orlando businesses in the wake of the financial crisis. Most significant story about a shopping center owner who created new businesses to fill vacancies while trying to survive the Great Recession. It ran on the front-page. Worked only Mondays and Fridays with full-time studies and part-time job. Received perfect marks in review and created first intern beat book.</p></div>
+          </div>
 
-
-            <div class="card bg-light mb-3">
-              <div class="card-header"><div class=title>Intern and Freelancer at The Ledger</div><div class=date>Sept. 2008 - Jan. 2011</div></div>
+          <!--- card four --->
+          <div class="card bg-light mb-3">
+            <div class="card-header"><div class=title>Intern and Freelancer at The Ledger</div><div class=date>Sept. 2008 - Jan. 2011</div></div>
             <div class=card-body><p>Worked as the business intern during the summer of 2009. Wrote enterprise and breaking news stories. Landed on the front-page reporting the city-owned airport was marred by a conflict between its director and a consultant hired by the city to attract new business. Impact included the termination of the airport consultant’s $216,000 contract, reappointment of the airport director to another department. Awarded the largest bonus an intern had received. Metro and sports stories as a freelancer. Formatted agate and edited wire stories for space on sports desk.</p></div>
-            </div>
+          </div>
 
+          <!--- card five --->
           <div class="card bg-light mb-3">
           <div class="card-header"><div class=title><a name="education">EDUCATION</div></div></a>
             <div class="card-body"
             <div class=container>
+              <!--- Making a new container so I can build two rows inside the car on medium browsers and up --->
               <div class="row">
                 <div class="col-md-6">
                   <div class=font-weight-bold>Philip Merrill College of Journalism</div>
@@ -138,10 +148,10 @@
                   <div>Graduated May 2011</div>
                 </div>
             </div>
-            </div>
-            </div>
+          </div>
+          </div>
 
-
+          <!--- card six --->
           <div class="card bg-light mb-3">
             <div class="card-header"><div class=title><a name="awards">AWARDS</div></div></a>
             <div class=card-body>
@@ -152,6 +162,8 @@
             </div>
           </div>
 
+          <!--- card six --->
+          <!--- this card only shows on mobile --->
           <div class="rightskills">
             <div class="card bg-light mb-3">
               <div class="card-header header">SKILLS</div>
@@ -159,6 +171,7 @@
             </div>
           </div>
 
+          <!--- card seven --->
           <div class="card bg-light mb-3">
             <div class="card-header"><div class=title><a name="otherexperience">Other Experience</div></div></a>
             <div class=card-body>
@@ -172,7 +185,11 @@
       </div>
     </div>
   </body>
+
   <footer>
-    <div class="col-12 feet rounded font-weight-bold"<p>Design and code by Ryan E. Little. © 2019<p>
+
+  <!--- a footer because of course --->
+  <div class="col-12 feet rounded font-weight-bold"<p>Design and code by Ryan E. Little. © 2019<p>
+
   </footer>
 </html>
