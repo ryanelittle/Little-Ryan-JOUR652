@@ -25,6 +25,10 @@ a.link:active{
    color: inherit;
 }
 
+/* more squares */
+ul {
+  list-style-type: square;
+}
 
 /* this is the name container */
 .whoami {
@@ -51,11 +55,7 @@ a.link:active{
   font-weight: lighter;
 }
 
-/* more squares */
-ul {
-  list-style-type: square;
-}
-
+/* might decide I like these buttons better one day */
 .button {
   margin: auto;
   padding: 1em 2 1em 2em;
@@ -83,12 +83,12 @@ ul {
   display: none;
 }
 
+/* hiding for non-mobile sizes */
 .rightbar {
   display: none;
 }
 
-
-
+/* setting the colors and the alignment on the nav bar */
 .navbutton {
   float: right;
     color: white;
@@ -128,6 +128,7 @@ ul {
   line-height: 1.15em;
 }
 
+/* the footer styling */
 .feet {
   background-color: gray;
   text-align: center;
@@ -137,11 +138,11 @@ ul {
   font-size: 1em;
 }
 
+/* I've gotta look good in a circl fram */
 #headshot {
   width: 10em;
   border-radius: 50%;
   margin: 0 0 0 1em;
-
 }
 
 /* this is restricting the size to less than the size of the sticky-top */
