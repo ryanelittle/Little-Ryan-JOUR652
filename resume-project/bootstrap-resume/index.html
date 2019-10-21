@@ -12,54 +12,111 @@
     content="Ryan E. Little">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
   </head>
 
   <body>
+    <!--- big splash jumbotron with background and name --->
     <div class=jumbotron>
     </div>
 
-  <div>EXPERIENCE</div>
-  <div>Reporter</div>
-  <div>The Ledger</div>
-  <div>June 2011 - July 2014</div>
-  <p>Primarily covered two largest city halls in the county. First reported on Winter Haven, Fla. before promotion to Lakeland. Wrote enterprise and breaking news stories with enormous impact. Produced multimedia projects. Live-tweeted commission meetings and other events. Covered 2012 Republican National Convention. Circulation of 40,000 and 60,000. Impact included:</p>
-  <ul>
-  <li>Termination of a planned $150 million mixed-use development set for the city’s premier recreational site that also sank a plan to relocate the city swimming pool to a brownfield.</li>
-  <li>Resignations of three city officials – including a commissioner – and prompted a state attorney’s office investigation that led to changes in the creation of city records.</li>
-  <li>Multiday narrative on the unsolved murder of a musician shot when a bystander intervened in an attempted robbery credited by some for leading to an arrest and conviction.</li>
-  <li>Broke statewide news multiple times; feature story about an apartment complex in the median of a state road picked up by wire services and ran in many Florida newspapers.</li>
-  </ul>
-  <div>Business Intern</div>
-  <div>Orlando Sentinel</div>
-  <div>January 2011 - May 2011</div>
-  Covered Orlando businesses in the wake of the financial crisis. Most significant story about a shopping center owner who created new businesses to fill vacancies while trying to survive the Great Recession. It ran on the front-page. Worked only Mondays and Fridays with full-time studies and part-time job. Received perfect marks in review and created first intern beat book.
+    <!--- this is my first container --->
+    <div class=container>
+    <div class=row>
 
-  <div>Business Intern and Freelancer</div>
-  <div>The Ledger</div>
-  <div>September 2008 - January 2011</div>
-  <p>Worked as the business intern during the summer of 2009. Wrote enterprise and breaking news stories. Landed on the front-page reporting the city-owned airport was marred by a conflict between its director and a consultant hired by the city to attract new business. Impact included the termination of the airport consultant’s $216,000 contract, reappointment of the airport director to another department. Awarded the largest bonus an intern had received. Metro and sports stories as a freelancer. Formatted agate and edited wire stories for space on sports desk.</p>
+      <!--- this is the left column that will stack on top and stick on mobile --->
+      <div class="col-md-4 sticky-top">
+        <!--- making new container to force sticky-top --->
+        <div class="container sticky-top">
+          <!---  using new grid to offset left column from right column --->
 
-  <div>EDUCATION</div>
-  <div>Master of Journalism, University of Maryland, Expected Graduation Date of December 2020</div>
-  <div>Bachelor of Arts, Journalism, University of Central Florida, May 2011</div>
-  <div>SKILLS</div>
-  <ul>
-    <li>Using the scientific method to develop and test hypotheses in the practice of journalism with impact.</li>
-    <li>Writing compelling feature stories, including narrative non-fiction.</li>
-    <li>Able to develop and maintain sources on a beat, develop day-to-day update stories as well as major enterprise pieces that can set the agenda</li>
-    <li>Skilled at using data in spreadsheets to develop stories and add to them. Learning to apply coding languages like R to expand my skills</li>
-    <li>Can use HTML5 and CSS to play a part in the professional design of stories when bringing together multiple elements onto a webpage</li>
-    <li>Fluent in Adobe Premier Pro and behind the camera to produces video packages created through a visual reporting process.</li>
+            <div class="whoami">
+              <img src="ryan-little-small.jpg" id=headshot />
 
 
-  <ul>
-    <li>2014 Joseph L. Brechner Freedom of Information Award</li>
-    <li>2013 FSNE First Place in Feature and Arts Writing, Division C</li>
-    <li>2013 SPJ Sunshine State Awards, First Place for Presidential Coverage</li>
-    <li>2012 FSNE First Place in Use of Social Media in Breaking News, Division C</li>
+              <div class=name>Ryan E. Little</div>
+              <div class=whois>Investigator, storyteller, multimedia journalist</div>
+              <div class=leftlist><a href="mailto:ryanerinlittle@gmail.com" class="link" alt="E-mail Ryan" ><i class="far fa-envelope"></i></a>
+              <a href="https://twitter.com/ryanlittlee" class="link" alt="View Ryan's Twitter Page" target="_blank" ><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/ryanlittlee/" class="link" alt="View Ryan's Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://github.com/ryanelittle/" class="link" alt="View Ryan's GitHub Repository" target="_blank"><i class="fab fa-github"></i></a></div>
+              <img class="leftskills" src="skills-left.jpg" alt="Ryan's Skills" hspace="0">
+            </div>
+        </div>
+      </div>
+
+      <!--- this is the right column that will stack on the bottom on mobile --->
+      <div class="col-md-8">
+        <!--- this is restricting the size to inside the stick-top --->
+        <div id="rightcolumn">
+        <div>EXPERIENCE</div>
+
+        <div>
 
 
 
+
+
+        <div>Reporter</div>
+        <div>The Ledger</div>
+        <div>June 2011 - July 2014</div>
+        <p>Primarily covered two largest city halls in the county. First reported on Winter Haven, Fla. before promotion to Lakeland. Wrote enterprise and breaking news stories with enormous impact. Produced multimedia projects. Live-tweeted commission meetings and other events. Covered 2012 Republican National Convention. Circulation of 40,000 and 60,000. Impact included:</p>
+        <ul>
+          <li>Termination of a planned $150 million mixed-use development set for the city’s premier recreational site that also sank a plan to relocate the city swimming pool to a brownfield.</li>
+          <li>Resignations of three city officials – including a commissioner – and prompted a state attorney’s office investigation that led to changes in the creation of city records.</li>
+          <li>Multiday narrative on the unsolved murder of a musician shot when a bystander intervened in an attempted robbery credited by some for leading to an arrest and conviction.</li>
+          <li>Broke statewide news multiple times; feature story about an apartment complex in the median of a state road picked up by wire services and ran in many Florida newspapers.</li>
+        </ul>
+
+
+        <div>Business Intern</div>
+        <div>Orlando Sentinel</div>
+        <div>January 2011 - May 2011</div>
+        <p>Covered Orlando businesses in the wake of the financial crisis. Most significant story about a shopping center owner who created new businesses to fill vacancies while trying to survive the Great Recession. It ran on the front-page. Worked only Mondays and Fridays with full-time studies and part-time job. Received perfect marks in review and created first intern beat book.</p>
+
+
+        <div>Business Intern and Freelancer</div>
+        <div>The Ledger</div>
+        <div>September 2008 - January 2011</div>
+        <p>Worked as the business intern during the summer of 2009. Wrote enterprise and breaking news stories. Landed on the front-page reporting the city-owned airport was marred by a conflict between its director and a consultant hired by the city to attract new business. Impact included the termination of the airport consultant’s $216,000 contract, reappointment of the airport director to another department. Awarded the largest bonus an intern had received. Metro and sports stories as a freelancer. Formatted agate and edited wire stories for space on sports desk.</p>
+
+        <div>EDUCATION</div>
+        <div>Master of Journalism, University of Maryland, Expected Graduation Date of December 2020</div>
+        <div>Bachelor of Arts, Journalism, University of Central Florida, May 2011</div>
+        <ul>
+        <li>Using the scientific method to develop and test hypotheses in the practice of journalism with impact.</li>
+        <li>Writing compelling feature stories, including narrative non-fiction.</li>
+        <li>Able to develop and maintain sources on a beat, develop day-to-day update stories as well as major enterprise pieces that can set the agenda</li>
+        <li>Skilled at using data in spreadsheets to develop stories and add to them. Learning to apply coding languages like R to expand my skills</li>
+        <li>Can use HTML5 and CSS to play a part in the professional design of stories when bringing together multiple elements onto a webpage</li>
+        <li>Fluent in Adobe Premier Pro and behind the camera to produces video packages created through a visual reporting process.</li>
+        </ul>
+
+        <div class="rightskills">
+          <div>SKILLS</div>
+          <ul>
+          <li>Using the scientific method to develop and test hypotheses in the practice of journalism with impact.</li>
+          <li>Writing compelling feature stories, including narrative non-fiction.</li>
+          <li>Able to develop and maintain sources on a beat, develop day-to-day update stories as well as major enterprise pieces that can set the agenda</li>
+          <li>Skilled at using data in spreadsheets to develop stories and add to them. Learning to apply coding languages like R to expand my skills</li>
+          <li>Can use HTML5 and CSS to play a part in the professional design of stories when bringing together multiple elements onto a webpage</li>
+          <li>Fluent in Adobe Premier Pro and behind the camera to produces video packages created through a visual reporting process.</li>
+          </ul>
+        </div>
+
+        <div>AWARDS</div>
+        <ul>
+          <li>2014 Joseph L. Brechner Freedom of Information Award</li>
+          <li>2013 FSNE First Place in Feature and Arts Writing, Division C</li>
+          <li>2013 SPJ Sunshine State Awards, First Place for Presidential Coverage</li>
+          <li>2012 FSNE First Place in Use of Social Media in Breaking News, Division C</li>
+        </ul>
+        </div>
+      </div>
+      </div>
+
+    </div>
+    </div>
   </body>
 </html>
