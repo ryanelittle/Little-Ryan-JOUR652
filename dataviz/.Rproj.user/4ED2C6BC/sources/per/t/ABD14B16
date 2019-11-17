@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1573747587444.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "ABD14B16",
+    "lastKnownWriteTime" : 8104338726696264226,
+    "last_content_update" : 1573747587444,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "CC58BC80",
+        "caption" : "total_miles",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=total_miles&cache_key=CC58BC80",
+        "displayedObservations" : 24,
+        "environment" : "",
+        "expression" : "total_miles",
+        "object" : "total_miles",
+        "preview" : 0,
+        "totalObservations" : 24,
+        "variables" : 4
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

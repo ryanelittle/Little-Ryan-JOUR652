@@ -1,0 +1,6 @@
+"0","yearly_totals <- miles_driven_md %>%"
+"0","  group_by(year) %>%"
+"0","  summarise(rural_total = sum(rural_total),"
+"0","            urban_total = sum(urban_total),"
+"0","            both_total = sum(both_total))"
+"0",""

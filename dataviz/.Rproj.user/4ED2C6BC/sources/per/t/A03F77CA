@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1573747862118.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A03F77CA",
+    "lastKnownWriteTime" : 25896170310402166,
+    "last_content_update" : 1573747862118,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "581A6BBD",
+        "caption" : "dmv_miles_per_person",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dmv_miles_per_person&cache_key=581A6BBD",
+        "displayedObservations" : 5,
+        "environment" : "",
+        "expression" : "dmv_miles_per_person",
+        "object" : "dmv_miles_per_person",
+        "preview" : 0,
+        "totalObservations" : 5,
+        "variables" : 9
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

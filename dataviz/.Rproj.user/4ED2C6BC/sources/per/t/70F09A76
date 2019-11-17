@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1573768599019.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "70F09A76",
+    "lastKnownWriteTime" : 1481872284776,
+    "last_content_update" : 1573768599019,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "771CECB5",
+        "caption" : "yearly_totals",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=yearly_totals&cache_key=771CECB5",
+        "displayedObservations" : 12,
+        "environment" : "",
+        "expression" : "yearly_totals",
+        "object" : "yearly_totals",
+        "preview" : 0,
+        "totalObservations" : 12,
+        "variables" : 4
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

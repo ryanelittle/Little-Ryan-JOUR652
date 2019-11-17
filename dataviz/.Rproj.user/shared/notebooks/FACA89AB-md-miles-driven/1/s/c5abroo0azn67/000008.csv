@@ -1,0 +1,3 @@
+"0","# import data"
+"0","miles_driven_md <- read.csv(""input_data/miles_driven_md.csv"", fileEncoding=""UTF-8-BOM"")"
+"0","clean_names(miles_driven_md)"

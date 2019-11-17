@@ -1,0 +1,3 @@
+"0","county_percent_pop <- county_percent_rural %>%"
+"0","  inner_join(md_population, by = ""GEOID"")"
+"0",""

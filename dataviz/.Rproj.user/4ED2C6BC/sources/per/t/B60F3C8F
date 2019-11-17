@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1573748667585.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B60F3C8F",
+    "lastKnownWriteTime" : 8026363914660965410,
+    "last_content_update" : 1573748667585,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "7A27ABD0",
+        "caption" : "county_percent_rural",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=county_percent_rural&cache_key=7A27ABD0",
+        "displayedObservations" : 144,
+        "environment" : "",
+        "expression" : "county_percent_rural",
+        "object" : "county_percent_rural",
+        "preview" : 0,
+        "totalObservations" : 144,
+        "variables" : 7
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

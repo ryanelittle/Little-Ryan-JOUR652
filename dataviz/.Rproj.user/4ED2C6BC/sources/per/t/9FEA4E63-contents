@@ -1,0 +1,367 @@
+---
+title: "md_miles_driven"
+author: "Ryan Little"
+date: "11/13/2019"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE, paged.print=TRUE)
+```
+
+
+## Load libraries
+
+```{r}
+library(tidyverse)  # attaches purrr and readr
+library(lubridate)
+library(rvest)
+library(downloader)
+library(R.utils)
+library(rlist)
+library(here)
+library(janitor)
+library(scales)
+library(ggrepel)
+library(ggplot2)
+library(here)
+library(tidycensus)
+library(ggthemes)
+library(scales)
+library("mapview")
+# library(fs)
+# library(stringr)
+
+# library(retrosheet)
+# install.packages('retrosheet')
+# devtools::install_github("rmscriven/retrosheet")
+
+# Store census API key
+census_api_key("2badea95d03037d0582d8c5ada5195100b1d92f6")
+
+options(scipen=999)
+```
+
+```{r}
+
+#clear environment for when I need it
+rm(list = ls(all.names = TRUE))
+
+```
+
+## Import Data
+
+```{r}
+# import data
+miles_driven_md <- read.csv("input_data/miles_driven_md.csv", fileEncoding="UTF-8-BOM")
+clean_names(miles_driven_md)
+glimpse(miles_driven_md)
+
+
+```
+
+
+```{r}
+
+#changing input to characters to do some math
+
+miles_driven_md <- miles_driven_md %>%
+  mutate(year = as.character(year),
+         geoid = as.character(geoid),
+         county = as.character(county),
+         r1 = as.character(r1),
+         r2 = as.character(r2),
+         r3 = as.character(r3),
+         r4 = as.character(r4),
+         r5 = as.character(r5),
+         r6 = as.character(r6),
+         r7 = as.character(r7),
+         rural_total = as.character(rural_total),
+         u1 = as.character(u1),
+         u2 = as.character(u2),
+         u3 = as.character(u3),
+         u4 = as.character(u4),
+         u5 = as.character(u5),
+         u6 = as.character(u6),
+         u7 = as.character(u7),
+         urban_total = as.character(urban_total),
+         both_total = as.character(both_total)) %>%
+  mutate(year = as.numeric(year),
+         r1 = as.numeric(r1),
+         r2 = as.numeric(r2),
+         r3 = as.numeric(r3),
+         r4 = as.numeric(r4),
+         r5 = as.numeric(r5),
+         r6 = as.numeric(r6),
+         r7 = as.numeric(r7),
+         rural_total = as.numeric(rural_total),
+         u1 = as.numeric(u1),
+         u2 = as.numeric(u2),
+         u3 = as.numeric(u3),
+         u4 = as.numeric(u4),
+         u5 = as.numeric(u5),
+         u6 = as.numeric(u6),
+         u7 = as.numeric(u7),
+         urban_total = as.numeric(urban_total),
+         both_total = as.numeric(both_total))
+glimpse(miles_driven_md)
+
+```
+
+## Data Analysis
+```{r}
+
+total_miles <- miles_driven_md %>%
+  group_by(county) %>%
+  summarise(rural_total = sum(rural_total),
+            urban_total = sum(urban_total),
+            both_total = sum(both_total)) %>%
+  arrange(desc(both_total))
+
+```
+
+```{r}
+
+ggplot(total_miles,  aes(x = reorder(county, -both_total), y = both_total,  fill=variable)) +
+  geom_bar(stat="identity", fill="gold") +
+  labs(x="County", y="Miles driven in millions", title="Total miles driven in Maryland", subtitle = "Prince George's, Baltimore counties lead Maryland in total miles driven since 2007.", caption = "Source: Maryland State Highway Administration") +
+  scale_y_continuous(labels = comma) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+```{r}
+yearly_totals <- miles_driven_md %>%
+  group_by(year) %>%
+  summarise(rural_total = sum(rural_total),
+            urban_total = sum(urban_total),
+            both_total = sum(both_total))
+
+```
+
+```{r}
+ggplot(yearly_totals) +
+  geom_bar(stat="identity", aes(year, both_total), color="black", position = "stack") +
+  geom_bar(stat="identity", aes(year, urban_total), color="red", position = "stack") +
+  geom_bar(stat="identity", aes(year, rural_total), color="gold", position = "stack") +
+  labs(x="Year", y="Miles driven in millions", title="Total traffic was increasing before a slight dip in 2018", subtitle = "The number of cars in rural areas during rush hour in Maryland has been increasing since 2013.", caption = "Source: Maryland State Highway Administration") +
+  scale_x_continuous(breaks = c(2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018)) +
+  scale_y_continuous(labels = comma) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+```{r}
+top_6<- miles_driven_md %>%
+  filter(county %in% c("PRINCE GEORGES", "BALTIMORE CO", "MONTGOMERY", "ANNE ARUNDEL", "HOWARD", "BALTIMORE CITY"))
+ggplot(top_6) +
+  geom_bar(stat="identity", aes(year, both_total, fill=county)) +
+  labs(x="Year", y="Total miles in millions", title="Top 6 counties for milese driven", subtitle = "Every county but Baltimore City has seen miles driven increase", caption = "Source: DEA ARCOS Database via Washington Post", fill="County") +
+  scale_x_continuous(breaks = c(2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018)) +
+  scale_y_continuous(labels = comma) +
+  facet_wrap(nrow=3, . ~ county) + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  guides(fill="none")
+
+
+```
+
+```{r}
+
+md_population <- get_acs(geography = "county", variables = "B01003_001", year = 2010, state = "MD", geometry = TRUE)
+clean_names(md_population)
+glimpse(md_population)
+```
+
+
+
+```{r}
+
+county_percent_rural <- miles_driven_md %>%
+  filter(year %in% c(2013, 2014, 2015, 2016, 2017, 2018)) %>%
+  select(geoid, year, county, rural_total, urban_total, both_total) %>%
+  group_by(year, geoid, county) %>%
+  summarise(rural_total = sum(rural_total),
+            urban_total = sum(urban_total),
+            both_total = sum(both_total)) %>%
+  arrange(year) %>%
+  arrange(county) %>%
+  rename(GEOID = geoid) %>%
+  mutate(rural_percent = (rural_total/both_total)*100)
+
+
+```
+
+
+```{r}
+county_percent_pop <- county_percent_rural %>%
+  inner_join(md_population, by = "GEOID")
+
+```
+
+
+```{r}
+
+miles_per_person_2017 <- county_percent_pop %>%
+  filter(year == 2017) %>%
+  mutate(rural_miles_per_person_2017 = ((rural_total*1000000)/estimate))%>%
+  mutate(urban_miles_per_person_2017 = ((urban_total*1000000)/estimate))%>%
+  mutate(both_miles_per_person_2017 = ((both_total*1000000)/estimate))%>%
+  arrange(desc(both_miles_per_person_2017))
+
+```
+
+```{r}
+
+miles_per_person_2014 <- county_percent_pop %>%
+  filter(year == 2014) %>%
+  mutate(rural_miles_per_person_2014= ((rural_total*1000000)/estimate))%>%
+  mutate(urban_miles_per_person_2014 = ((urban_total*1000000)/estimate))%>%
+  mutate(both_miles_per_person_2014 = ((both_total*1000000)/estimate))%>%
+  arrange(desc(both_miles_per_person_2014))
+
+```
+
+
+```{r}
+
+ggplot(miles_per_person_2017,  aes(x = reorder(county, -both_miles_per_person_2017), y = both_miles_per_person_2017,  fill=variable)) +
+  geom_bar(stat="identity", fill="gold") +
+  labs(x="County", y="Miles driven per person", title="Total miles driven per person in Maryland in 2017", subtitle = "Queen Anne's, Talbot counties lead Maryland in total miles driven per person in 2017.", caption = "Source: Maryland State Highway Administration, 2017 ACS") +
+  scale_y_continuous(labels = comma) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+```{r}
+
+ggplot(miles_per_person_2014,  aes(x = reorder(county, -both_miles_per_person_2014), y = both_miles_per_person_2014,  fill=variable)) +
+  geom_bar(stat="identity", fill="red") +
+  labs(x="County", y="Miles driven per person", title="Total miles driven per person in Maryland in 2014", subtitle = "Queen Anne's, Talbot counties lead Maryland in total miles driven per person in 2017.", caption = "Source: Maryland State Highway Administration, 2017 ACS") +
+  scale_y_continuous(labels = comma) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+
+```{r}
+dmv_miles_per_person_2017 <- miles_per_person_2017 %>%
+  filter(county %in% c("HOWARD", "MONTGOMERY", "PRINCE GEORGES", "ANNE ARUNDEL", "CHARLES"))
+
+```
+
+```{r}
+dmv_miles_per_person_2014 <- miles_per_person_2014 %>%
+  filter(county %in% c("HOWARD", "MONTGOMERY", "PRINCE GEORGES", "ANNE ARUNDEL", "CHARLES"))
+
+```
+
+```{r}
+ggplot(dmv_miles_per_person_2017,  aes(x = reorder(county, -both_miles_per_person_2017), y = both_miles_per_person_2017,  fill=variable)) +
+  geom_bar(stat="identity", fill="gold") +
+  labs(x="County", y="Miles driven per person", title="Total miles driven per person in five counties closest to D.C.", subtitle = "Howard County had the most miles per person driven in 2017.", caption = "Source: Maryland State Highway Administration, 2017 ACS") +
+  scale_y_continuous(labels = comma) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+
+```{r}
+
+ggplot(dmv_miles_per_person_2014,  aes(x = reorder(county, -both_miles_per_person_2014), y = both_miles_per_person_2014,  fill=variable)) +
+  geom_bar(stat="identity", fill="red") +
+  labs(x="County", y="Miles driven per person", title="Total miles driven per person in five counties closest to D.C.", subtitle = "Howard County had the most miles per person driven in 2014.", caption = "Source: Maryland State Highway Administration, 2017 ACS") +
+  scale_y_continuous(labels = comma) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+
+```
+
+
+```{r}
+
+dmv_miles_per_person <- dmv_miles_per_person_2017 %>%
+  inner_join(dmv_miles_per_person_2014, by = c("GEOID", "county")) %>%
+  select(GEOID,
+         county, 
+         rural_miles_per_person_2014, 
+         rural_miles_per_person_2017, 
+         urban_miles_per_person_2014, 
+         urban_miles_per_person_2017, 
+         both_miles_per_person_2014, 
+         both_miles_per_person_2017) %>%
+  mutate(rural_rate_change = (rural_miles_per_person_2017 - rural_miles_per_person_2014)) %>%
+  mutate(urban_rate_change = (urban_miles_per_person_2017 - urban_miles_per_person_2014)) %>%
+  mutate(both_rate_change = (both_miles_per_person_2017 - both_miles_per_person_2014))
+```
+
+```{r}
+
+miles_per_person <- miles_per_person_2017 %>%
+  inner_join(miles_per_person_2014, by = c("GEOID", "county")) %>%
+  select(GEOID, 
+         county, 
+         rural_miles_per_person_2014, 
+         rural_miles_per_person_2017, 
+         urban_miles_per_person_2014, 
+         urban_miles_per_person_2017, 
+         both_miles_per_person_2014, 
+         both_miles_per_person_2017) %>%
+  mutate(rural_rate_change = (rural_miles_per_person_2017 - rural_miles_per_person_2014)) %>%
+  mutate(urban_rate_change = (urban_miles_per_person_2017 - urban_miles_per_person_2014)) %>%
+  mutate(both_rate_change = (both_miles_per_person_2017 - both_miles_per_person_2014))
+```
+
+
+```{r}
+miles_per_person %>%
+  select(county, rural_rate_change, urban_rate_change, both_rate_change) %>%
+  arrange(desc(both_rate_change))
+
+# Worcester County had the highest rate of change from 2014 to 2017 in total miles driver per person.
+
+```
+
+```{r}
+
+miles_per_person %>%
+  select(county, rural_rate_change, urban_rate_change, both_rate_change) %>%
+  arrange(desc(urban_rate_change))
+
+# Worcester County had the highest rate of change from 2014 to 2017 in total urban miles driver per person as well.
+
+
+```
+
+```{r}
+
+miles_per_person %>%
+  select(county, rural_rate_change, urban_rate_change, both_rate_change) %>%
+  arrange(desc(rural_rate_change))
+
+# Worcester County had the highest rate of change from 2014 to 2017 in total rural miles driver per person as well.
+
+
+```
+
+
+```{r}
+
+dmv_miles_per_person %>%
+  select(county, rural_rate_change, urban_rate_change, both_rate_change) %>%
+  arrange(desc(both_rate_change))
+
+# Howard County had the highest rate of change from 2014 to 2017 in total miles driver per person in the counties closest to D.C.
+
+```
+
+
+```{r}
+
+
+```

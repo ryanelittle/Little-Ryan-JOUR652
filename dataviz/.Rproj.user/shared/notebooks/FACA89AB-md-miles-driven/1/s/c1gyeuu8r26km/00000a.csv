@@ -1,0 +1,7 @@
+"0",""
+"0","ggplot(total_miles,  aes(x = reorder(county, -both_total), y = both_total,  fill=variable)) +"
+"0","  geom_bar(stat=""identity"", fill=""gold"") +"
+"0","  labs(x=""County"", y=""Miles driven in millions"", title=""Total miles driven in Maryland"", subtitle = ""Prince George's, Baltimore counties lead Maryland in total miles driven since 2007."", caption = ""Source: Maryland State Highway Administration"") +"
+"0","  scale_y_continuous(labels = comma) +"
+"0","  theme(axis.text.x = element_text(angle = 45, hjust = 1))"
+"0",""

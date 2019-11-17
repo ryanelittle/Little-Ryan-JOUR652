@@ -1,0 +1,7 @@
+"0",""
+"0","dmv_miles_per_person <- dmv_miles_per_person_2017 %>%"
+"0","  inner_join(dmv_miles_per_person_2014, by = c(""GEOID"", ""county"")) %>%"
+"0","  select(GEOID, county, rural_miles_per_person_2014, rural_miles_per_person_2017, urban_miles_per_person_2014, urban_miles_per_person_2017, both_miles_per_person_2014, both_miles_per_person_2017) %>%"
+"0","  mutate(rural_rate_change = (rural_miles_per_person_2017 - rural_miles_per_person_2014)) %>%"
+"0","  mutate(urban_rate_change = (urban_miles_per_person_2017 - urban_miles_per_person_2014)) %>%"
+"0","  mutate(both_rate_change = (both_miles_per_person_2017 - both_miles_per_person_2014))"

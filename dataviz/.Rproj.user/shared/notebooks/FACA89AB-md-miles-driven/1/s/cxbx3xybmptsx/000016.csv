@@ -1,0 +1,6 @@
+"0","ggplot(dmv_miles_per_person_2017,  aes(x = reorder(county, -both_miles_per_person_2017), y = both_miles_per_person_2017,  fill=variable)) +"
+"0","  geom_bar(stat=""identity"", fill=""gold"") +"
+"0","  labs(x=""County"", y=""Miles driven per person"", title=""Total miles driven per person in five counties closest to D.C."", subtitle = ""Howard County had the most miles per person driven in 2017."", caption = ""Source: Maryland State Highway Administration, 2017 ACS"") +"
+"0","  scale_y_continuous(labels = comma) +"
+"0","  theme(axis.text.x = element_text(angle = 45, hjust = 1))"
+"0",""

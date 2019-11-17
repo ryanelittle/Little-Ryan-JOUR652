@@ -1,0 +1,4 @@
+"0",""
+"0","#clear environment for when I need it"
+"0","rm(list = ls(all.names = TRUE))"
+"0",""

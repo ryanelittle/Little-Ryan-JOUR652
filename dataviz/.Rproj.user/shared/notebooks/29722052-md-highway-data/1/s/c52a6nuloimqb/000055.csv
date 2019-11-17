@@ -1,0 +1,4 @@
+"0",""
+"0","ggplot(state_only_total_average) +"
+"0","  geom_bar(aes(year, c(total_avg_drv)), stat=""identity"", fill=""red"") +"
+"0","  labs(x=""Year"", y=""Total drivers"", title=""x"", subtitle = """", caption = ""Source: Maryland State Highway Administration"")"

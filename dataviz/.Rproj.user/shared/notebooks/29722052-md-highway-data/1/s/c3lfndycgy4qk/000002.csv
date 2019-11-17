@@ -1,0 +1,30 @@
+"0",""
+"0","average_daily_traffic <- read_csv(here(""input_data"", ""Maryland_Annual_Average_Daily_Traffic__Annual_Average_Daily_Traffic_SHA_Statewide_AADT_Lines.csv""))"
+"2","Parsed with column specification:
+cols(
+  .default = col_double(),
+  LOCATION_ID = [31mcol_character()[39m,
+  COUNTY_DESC = [31mcol_character()[39m,
+  MUNICIPALITY = [31mcol_character()[39m,
+  ROADNAME = [31mcol_character()[39m,
+  ID_PREFIX = [31mcol_character()[39m,
+  MP_SUFFIX = [31mcol_character()[39m,
+  STATION_DESC = [31mcol_character()[39m,
+  ROAD_SECTION = [31mcol_character()[39m,
+  RURAL_URBAN = [31mcol_character()[39m,
+  F_SYSTEM_DESC = [31mcol_character()[39m,
+  ROUTEID = [31mcol_character()[39m,
+  ROUTEID_RH = [31mcol_character()[39m,
+  PEAK_HOUR_DIRECTION = [31mcol_character()[39m,
+  COUNTED_FACTORED = [31mcol_character()[39m,
+  LINK = [31mcol_character()[39m,
+  LOC_ERROR = [31mcol_character()[39m,
+  AADT_2009_ANNO = [31mcol_character()[39m,
+  AADT_2010_ANNO = [31mcol_character()[39m,
+  AADT_2011_ANNO = [31mcol_character()[39m,
+  AADT_2012_ANNO = [31mcol_character()[39m
+  # ... with 28 more columns
+)
+"
+"2","See spec(...) for full column specifications.
+"

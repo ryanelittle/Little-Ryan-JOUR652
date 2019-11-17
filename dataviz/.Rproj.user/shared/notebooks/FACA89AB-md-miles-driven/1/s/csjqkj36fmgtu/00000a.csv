@@ -1,0 +1,8 @@
+"0",""
+"0","miles_per_person_2017 <- county_percent_pop %>%"
+"0","  filter(year == 2017) %>%"
+"0","  mutate(rural_miles_per_person_2017 = ((rural_total*1000000)/estimate))%>%"
+"0","  mutate(urban_miles_per_person_2017 = ((urban_total*1000000)/estimate))%>%"
+"0","  mutate(both_miles_per_person_2017 = ((both_total*1000000)/estimate))%>%"
+"0","  arrange(desc(both_miles_per_person_2017))"
+"0",""

@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1573747760597.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D1F665BA",
+    "lastKnownWriteTime" : 7287422521265240610,
+    "last_content_update" : 1573747760597,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "DFB908B5",
+        "caption" : "miles_per_person_2017",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=miles_per_person_2017&cache_key=DFB908B5",
+        "displayedObservations" : "24",
+        "environment" : "",
+        "expression" : "miles_per_person_2017",
+        "object" : "miles_per_person_2017",
+        "preview" : "0",
+        "totalObservations" : "24",
+        "variables" : "15"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

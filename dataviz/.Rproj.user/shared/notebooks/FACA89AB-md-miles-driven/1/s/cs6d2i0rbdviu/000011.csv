@@ -1,0 +1,7 @@
+"0",""
+"0","ggplot(miles_per_person_2014,  aes(x = reorder(county, -both_miles_per_person_2014), y = both_miles_per_person_2014,  fill=variable)) +"
+"0","  geom_bar(stat=""identity"", fill=""red"") +"
+"0","  labs(x=""County"", y=""Miles driven per person"", title=""Total miles driven per person in Maryland in 2014"", subtitle = ""Queen Anne's, Talbot counties lead Maryland in total miles driven per person in 2017."", caption = ""Source: Maryland State Highway Administration, 2017 ACS"") +"
+"0","  scale_y_continuous(labels = comma) +"
+"0","  theme(axis.text.x = element_text(angle = 45, hjust = 1))"
+"0",""
