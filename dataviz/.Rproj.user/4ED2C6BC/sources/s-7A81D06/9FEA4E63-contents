@@ -363,5 +363,7 @@ dmv_miles_per_person %>%
 
 ```{r}
 
+write.csv(miles_per_person,"miles-per-person.csv", row.names = FALSE)
+
 
 ```

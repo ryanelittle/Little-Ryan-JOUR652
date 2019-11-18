@@ -91,55 +91,37 @@
 <div class="row">
   <div class="col-md-12 image-break">
     <figure>
-      <img class="img-fluid" src="http://placekitten.com/1200/600"/>
-        <figcaption>
-        This is a caption placeholder.
+<iframe src="https://uploads.knightlab.com/storymapjs/eca8144209344de929778d2311ffef0a/maryland-traffic/index.html" frameborder="0" width="100%" height="800"></iframe>
         </figcaption>
       </figure>
     </div>
   </div>
 <!--- End image component --->
 
-<!--- Start body column --->
-<div class="row">
-  <div class="col-md-8 offset-md-2">
-    <h2 class="subhead-break">Heading 2</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-</div>
-<!--- End body column --->
-
-<!--- Start body column --->
-<div class="row">
-  <div class="col-md-8 offset-md-2 pb-md-2">
-    <h2 class="subhead-break">Heading 2</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-</div>
-<!--- End body column --->
-
 <!--- End content container --->
+<div>
+
 </div>
 
-<!--- pie chart --->
-<div class="graphic-container">
-  <h2>What race are school shooters likely to be?</h2>
-  <div id="piechart"></div>
-  <em>Source: Data collected by The Washington Post</em>
- </div>
 
+
+<br>
 <!-- bar chart-->
 <div class="graphic-container">
- <h2>Where do school shootings occur?</h2>
- <div id="barchart"></div>
- <em>Source: Data collected by The Washington Post</em>
+ <h2>Queen Anne's, Talbot counties lead Maryland in total miles driven per person in 2017.</h2>
+ <div id="maryland2017"></div>
+ <em>Source: Data collected by the Maryland Department of Traffic State Highway Administration</em>
 </div>
-
+<br>
+<br>
 <!-- line chart-->
 <div class="graphic-container">
- <h2>Examining the carnage.</h2>
- <div id="linechart"></div>
- <em>Source: Data collected by The Washington Post</em>
+ <h2>The share of urban traffic in Washington County increased 3 percent from 2014 to 2017.</h2>
+ <div id="washingtoncounty2017"></div>
+ </div>
+<div class="graphic-container">
+ <div id="washingtoncounty2014"></div>
+ <em>Source: Data collected by the Maryland Department of Traffic State Highway Administration</em>
 </div>
 
 
@@ -151,57 +133,71 @@
 
 <!-- c3 script-->
   <script type="text/javascript">
-  //CHART 1
-  var chart = c3.generate({
-    bindto: '#linechart',
-    data: {
-      x: 'x',
-      columns: [
-        ['x', 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
-        ['Fatalities', 14, 4, 5, 1, 5, 3, 9, 9, 1, 5, 1, 3, 2, 32, 3, 6, 0, 2, 5, 21],
-        ['Injuries', 35, 3, 22, 7, 7, 9, 17, 16, 17, 5, 4, 6, 9, 8, 13, 14, 2, 18, 15, 44],
-        ['Number of incidents', 7, 12, 13, 5, 11, 9, 13, 15, 10, 9, 9, 9, 7, 11, 13, 16, 7, 13, 14, 12],
-      ]
-    },
-    color: {
-      pattern: ['#ff0000', '#455380', '#ee6a4b', '#60c4b2', '#973895']
-    }
-  });
-  //chart 2
+ var chart3 = c3.generate({
+        bindto: '#washingtoncounty2017',
+        data: {
+          columns: [
+            ['2017 Rural Miles Driven Per Resident', 6069],
+            ['2017 Urban Miles Driven Per Resident', 8276],
+          ],
+          type : 'pie',
+          onclick: function (d, i) { console.log("onclick", d, i); },
+          onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+          onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+        },
+        color: {
+          pattern: ['#B22222', '#DC143C']
+        }
+      });
+      var chart3 = c3.generate({
+             bindto: '#washingtoncounty2014',
+             data: {
+               columns: [
+                 ['2014 Rural Miles Driven Per Resident', 6171],
+                 ['2014 Urban Miles Driven Per Resident', 7442],
+               ],
+               type : 'pie',
+               onclick: function (d, i) { console.log("onclick", d, i); },
+               onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+               onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+             },
+             color: {
+               pattern: ['#B22222', '#DC143C']
+             }
+           });
   var chart2 = c3.generate({
-      bindto: '#barchart',
+      bindto: '#maryland2017',
       data: {
         columns: [
-          ['City', 101],
-          ['Suburb', 48],
-          ['Town', 24],
-          ['Rural', 31],
+          ["'Queen Anne's County", 20513],
+          ['Talbot County', 17478],
+          ['Garrett County', 17018],
+          ['Worcester County', 16545],
+          ['Howard County', 15446],
+          ['Washington County', 14344],
+          ['Frederick County', 14223],
+          ['Cecil County', 13292],
+          ['Caroline County', 12498],
+          ['Anne Arundel County', 11747],
+          ['Dorchester County', 11738],
+          ['Allegany County', 11254],
+          ["Prince George's County", 10999],
+          ['Baltimore County', 10920],
+          ['Harford County', 10709],
+          ['Somerset County', 10640],
+          ['Kent County', 	10441],
+          ['Wicomico County', 10418],
+          ["St. Mary's County", 	9374],
+          ['Charles County', 	9165],
+          ['Calvert County', 8647],
+          ['Montgomery County', 8333],
+          ['Carroll County', 7972],
+          ['Baltimore City', 5803]
         ],
         type: 'bar'
       },
       color: {
-        pattern: ['#2a8dc5', '#455380', '#ee6a4b', '#60c4b2', '#973895', '#fae255', '#af3d46', '#f8bb63', '#818281']
-      }
-    });
-    // chart 3
-    var chart3 = c3.generate({
-      bindto: '#piechart',
-      data: {
-        // iris data from R
-        columns: [
-          ['Asian', 1],
-          ['American Indian', 3],
-          ['Black', 35],
-          ['Hispanic', 6],
-          ['White', 60],
-        ],
-        type : 'pie',
-        onclick: function (d, i) { console.log("onclick", d, i); },
-        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-      },
-      color: {
-        pattern: ['#2a8dc5', '#455380', '#ee6a4b', '#60c4b2', '#973895']
+        pattern: ['#800000', '#8B0000', '	#A52A2A', '#B22222', '#DC143C', '#FF6347', '#FF7F50', '#CD5C5C', '#F08080', '#E9967A', '#FA8072', '#FFA07A', '#FF4500', '#FF8C00', '#FFA500', '#FFD700', '#B8860B', '#DAA520', '#EEE8AA', '#BDB76B', '#F0E68C', '#808000', '#FFFF00', '#9ACD32']
       }
     });
 </script>

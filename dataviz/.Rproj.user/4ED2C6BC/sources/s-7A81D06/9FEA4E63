@@ -2,19 +2,19 @@
     "collab_server" : "",
     "contents" : "",
     "created" : 1573692301628.000,
-    "dirty" : false,
+    "dirty" : true,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
     "id" : "9FEA4E63",
     "lastKnownWriteTime" : 1573754260,
-    "last_content_update" : 1573754260356,
+    "last_content_update" : 1574043064527,
     "path" : "~/GitHub/Little-Ryan-JOUR652/dataviz/md-miles-driven.Rmd",
     "project_path" : "md-miles-driven.Rmd",
     "properties" : {
-        "cursorPosition" : "234,38",
-        "last_setup_crc32" : "",
-        "scrollLine" : "220"
+        "cursorPosition" : "369,0",
+        "last_setup_crc32" : "7A81D06d4872713",
+        "scrollLine" : "361"
     },
     "read_only" : false,
     "read_only_alternatives" : [
