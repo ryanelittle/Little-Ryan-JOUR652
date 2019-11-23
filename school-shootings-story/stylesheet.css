@@ -8,10 +8,26 @@ h2 {
   font-size: 1.5em;
 }
 
+h3{
+  font-family: Montserrat, sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  padding-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
 p {
-  font-family: "PT Serif", serif;
-  font-size: 1.2em;
   line-height: 180%;
+}
+
+p.graf {
+  font-family: "PT Serif", serif;
+  font-size: 1em;
 }
 
 a:link {
@@ -30,11 +46,12 @@ a:hover {
 }
 
 footer {
+  font-family: Montserrat, sans-serif;
   width: 100%;
   background-color: black;
   text-align: center;
   color: white;
-  padding: 1em 0 1em 0;
+  padding: 25px 25px 25px 25px;
 }
 
 ul.navbar-nav {
@@ -52,10 +69,6 @@ img.small-icon {
 
 .image-break {
   margin: 2em 0 0 0;
-}
-
-.subhead-break{
-  margin: .66em 0 0 0;
 }
 
 .paragraph-break{
@@ -78,4 +91,68 @@ background:#000 !important;
 font-family: 'Montserrat', sans-serif;
 color: white;
 font-size: 1.25em;
+}
+
+.hero-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+}
+
+.center {
+  display: inline;
+  text-align: center;
+}
+
+.center-stars {
+  text-align: center;
+}
+
+.intro {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25em;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.stack-image {
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+  padding-top:30px;
+  display: block;
+}
+
+.reusable {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.caption {
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+  padding-bottom:30px;
+  font-family: 'Montserrat', sans-serif;
+  color:#999;
+}
+
+.data {
+  background-color: #f9f9f9;
+}
+
+
+.graphic-container {
+  padding-top:30px;
+  padding-bottom:30px;
+  border-top:1px solid #cdcdcd;
+  border-bottom:1px solid #cdcdcd;
+  font-family: 'Montserrat', sans-serif;
+  margin:0 auto;
+  color: #444;
+}
+
+#left {
+  text-align: left;
 }
