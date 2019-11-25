@@ -1,4 +1,4 @@
-year.x,GEOID,county,rural_miles_per_person_2014,rural_miles_per_person_2017,urban_miles_per_person_2014,urban_miles_per_person_2017,both_miles_per_person_2014,both_miles_per_person_2017,rural_rate_change,urban_rate_change,both_rate_change
+year,GEOID,county,rural_miles_per_person_2014,rural_miles_per_person_2017,urban_miles_per_person_2014,urban_miles_per_person_2017,both_miles_per_person_2014,both_miles_per_person_2017,rural_rate_change,urban_rate_change,both_rate_change
 2017,24001,ALLEGANY,3899,4167,6645,7088,10544,11254,268,442,710
 2017,24003,ANNE ARUNDEL,768,801,10258,10946,11026,11747,32,689,721
 2017,24510,BALTIMORE CITY,0,3,5469,5800,5469,5803,3,330,334
