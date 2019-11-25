@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Map</title>
+<script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+
+<style>
+.county {
+	stroke: #fff;
+	stroke-width: 0.5;
+	fill: gray;
+}
+.hidden {
+		display: none;
+}
+div.tooltip {
+		color: #222;
+		background-color: #fff;
+		padding: .5em;
+		text-shadow: #f5f5f5 0 1px 0;
+		border-radius: 2px;
+		opacity: 0.9;
+		position: absolute;
+}
+</style>
+</head>
+<body>
+  <div id="d3-container" class="svg-container"></div>
+	<script type="text/javascript">
+
+		// Set the height and width of your element
+    var w = 600;
+    var h = 400;
+
+		// Create an svg with the height aand width and assign it to a variable
+    var svg = d3.select("div#d3-container")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+		// Defining what type of projection D3 should use to interpret the data.
+		// In this case we'll use a mercator projection.
+		// Each of these functions: set the center of the map to the prime meridian and equator,
+		// Zoom the map in so Maryland is visible.
+		// Move the center of the map to the appropriate lat/long
+    var projection = d3.geoMercator()
+                       .translate([w/2, h/2])
+                       .scale(7000)
+                       .center([-77.4,38.8]);
+
+		// Creates a new path generator with the appropriate projection
+    var geoPathGenerator = d3.geoPath()
+                 .projection(projection);
+
+		// Creating an iterable variable with key-value pairs.
+     var counties = d3.map();
+
+		  // Load data
+			// Maryland GeoJSON data. This data defines the shape of the counties.
+			// GeoJSON is a collection of latitude and longitude coordinates.
+			// We use our projection defined above to "project" these data points
+			// on a flat screen.
+			var maryland = d3.json("https://raw.githubusercontent.com/frankrowe/maryland-geojson/master/maryland-counties.geojson");
+			// This data, however, defines congressional districts
+			// var maryland = d3.json("https://raw.githubusercontent.com/frankrowe/maryland-geojson/master/maryland-congressional-districts.geojson");
+			// And this data defines zip Choose_Maryland___Compare_Counties_
+			// var maryland = d3.json("https://raw.githubusercontent.com/frankrowe/maryland-geojson/master/maryland-zips.geojson");
+
+			// Wait until all the files have floaded, then begin working through everything;
+			Promise.all([maryland]).then(function(values){
+					// Grab the SVG and begin adding "path" elements.
+
+			    svg.selectAll("path")
+			        .data(values[0].features)
+			        .enter()
+			        .append("path")
+			        .attr("class","county")
+			        .attr("d", geoPathGenerator)
+
+			  });
+
+</script>
+</body>
+</html>
