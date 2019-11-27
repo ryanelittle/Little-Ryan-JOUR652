@@ -1,0 +1,27 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1574799027329.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2448658909",
+    "id" : "60528119",
+    "lastKnownWriteTime" : 1574799127,
+    "last_content_update" : 1574799127276,
+    "path" : "~/GitHub/little-ryan-jour772/okaloosa-court-records/okaloosa-court-records.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "49,3",
+        "last_setup_crc32" : "28399453d4872713",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

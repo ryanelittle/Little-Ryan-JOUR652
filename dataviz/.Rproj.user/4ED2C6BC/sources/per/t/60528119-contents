@@ -1,0 +1,50 @@
+---
+title: "okaloosa-court-data"
+author: "Ryan Little"
+date: "11/26/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE, paged.print=TRUE)
+```
+
+
+## Load libraries
+
+```{r}
+library(tidyverse)  # attaches purrr and readr
+library(lubridate)
+library(rvest)
+library(downloader)
+library(R.utils)
+library(rlist)
+library(here)
+library(janitor)
+library(scales)
+library(ggrepel)
+library(ggplot2)
+library(here)
+library(tidycensus)
+library(ggthemes)
+library(scales)
+library("mapview")
+# library(fs)
+# library(stringr)
+
+# library(retrosheet)
+# install.packages('retrosheet')
+# devtools::install_github("rmscriven/retrosheet")
+
+# Store census API key
+census_api_key("2badea95d03037d0582d8c5ada5195100b1d92f6")
+
+options(scipen=999)
+```
+
+```{r}
+
+#clear environment for when I need it
+rm(list = ls(all.names = TRUE))
+
+```
