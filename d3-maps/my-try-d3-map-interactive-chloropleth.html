@@ -56,7 +56,7 @@ div.tooltip {
 		// Creating an iterable variable with key-value pairs.
 		var countyMilesPerPerson = d3.map();
 
-		// Creaing our color scheme and the stops.
+		// Creating our color scheme and the stops.
      var colorScale = d3.scaleThreshold()
                     .domain([100, 500, 1000, 2000])
                     .range(d3.schemeYlOrRd[4]);
@@ -101,7 +101,7 @@ div.tooltip {
 									tooltip.classed('hidden', false)
 			              .attr('style', `left:${mouse[0] + 15}px; top: ${mouse[1] - 35}px;`)
 			              .html(`
-			                ${d.properties.name.toUpperCase()}: $${countyMilesPerPerson.get(d.properties.name.toUpperCase())}
+			                ${d.properties.name.toUpperCase()}: ${countyMilesPerPerson.get(d.properties.name.toUpperCase())}
 			                `
 			              );
 

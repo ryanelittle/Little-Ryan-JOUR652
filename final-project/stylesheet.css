@@ -4,13 +4,14 @@ h1 {
 }
 
 h2 {
-  font-family: roboto, sans-serif;
+  font-family: 'roboto', sans-serif;
   font-size: 1.5em;
 }
 
 p {
   font-family: "times new roman", serif;
   font-size: 1.2em;
+  line-height: 1.35em;
 }
 
 footer {
@@ -21,8 +22,23 @@ footer {
   padding: 1em 0 1em 0;
 }
 
+b {
+  font-weight: bolder;
+}
+
+div.tooltip {
+		color: #222;
+		background-color: #fff;
+		padding: .5em;
+		text-shadow: #f5f5f5 0 1px 0;
+		border-radius: 2px;
+		opacity: 0.9;
+		position: absolute;
+}
+
 .headline {
   text-align: center;
+  padding-top: 2em;
 }
 
 .image-break {
@@ -30,7 +46,7 @@ footer {
 }
 
 .subhead-break{
-  margin: .66em 0 0 0;
+  margin: 1em 0 0 0;
 }
 
 .paragraph-break{
@@ -42,7 +58,36 @@ background:#000 !important;
 }
 
 .navbar {
-font-family: 'Montserrat', sans-serif;
+font-family: 'roboto', sans-serif;
 color: white;
 font-size: 1.25em;
+}
+
+.byline {
+  font-family: "times new roman", sans-serif;
+  font-size: 1.2em;
+}
+
+.county {
+	stroke: #fff;
+	stroke-width: 0.5;
+}
+
+.hidden {
+		display: none;
+}
+
+.graphic-container {
+  padding-top:30px;
+  padding-bottom:30px;
+  border-top:1px solid #cdcdcd;
+  border-bottom:1px solid #cdcdcd;
+  font-family: 'Montserrat', sans-serif;
+  margin:0 auto;
+  color: #444;
+}
+
+.caption {
+  font-family: "times new roman", serif;
+  font-size: 1em;
 }

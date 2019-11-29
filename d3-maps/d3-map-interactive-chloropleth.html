@@ -99,7 +99,7 @@ div.tooltip {
 									// Remove the class of hidden, then set its styles to be just off-center from the mouse
 									// Then add data. The county name comes from the map, the data comes from the counties Map.
 									tooltip.classed('hidden', false)
-			              .attr('style', `left:${mouse[0] + 15}px; top: ${mouse[1] - 35}px;`)
+			              .attr('style', `left:${mouse[0] + 2}px; top: ${mouse[1] - 30}px;`)
 			              .html(`
 			                ${d.properties.name}: $${countyHousingCost.get(d.properties.name)}
 			                `
