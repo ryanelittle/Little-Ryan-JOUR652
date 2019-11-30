@@ -1,5 +1,5 @@
 h1 {
-  font-family: helvetica, sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 2.5em;
 }
 
@@ -13,9 +13,16 @@ h3 {
   font-size: 1.25em;
 }
 
-p {
-  font-family: "times new roman", serif;
+h4 {
+  font-family: 'georgia', serif;
   font-size: 1.5em;
+  font-weight: 400;
+  padding-top: .75em;
+}
+
+p {
+  font-family: "georgia", serif;
+  font-size: 1.4em;
   line-height: 1.35em;
 }
 
@@ -43,7 +50,7 @@ div.tooltip {
 
 .headline {
   text-align: center;
-  padding-top: 2em;
+  padding-top: .1em;
 }
 
 .image-break {
@@ -69,8 +76,10 @@ font-size: 1.25em;
 }
 
 .byline {
-  font-family: "times new roman", sans-serif;
+  font-family: "georgia", sans-serif;
   font-size: 1.2em;
+  padding-top: .75em;
+
 }
 
 .county {
@@ -110,8 +119,20 @@ font-size: 1.25em;
 
 .data {
   background-color: #f9f9f9;
+  padding-top: 1em;
 }
 
 .small-font {
   font-size: 1em;
+}
+
+.stoplight {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2em;
+}
+
+#data-box {
+  padding-top: 2em;
 }
