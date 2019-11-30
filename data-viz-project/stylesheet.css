@@ -36,3 +36,7 @@ footer {
 .paragraph-break{
   margin: 0 0 1em 0;
 }
+
+.container {
+  float: left;
+}

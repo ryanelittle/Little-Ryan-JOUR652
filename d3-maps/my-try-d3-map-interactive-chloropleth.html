@@ -39,6 +39,10 @@ div.tooltip {
                 .attr("width", w)
                 .attr("height", h);
 
+		var svg = d3.select("div#svg2")
+								.append("svg")
+								.attr("width", w)
+								.attr("height", h);
 		// Defining what type of projection D3 should use to interpret the data.
 		// In this case we'll use a mercator projection.
 		// Each of these functions: set the center of the map to the prime meridian and equator,
@@ -90,7 +94,7 @@ div.tooltip {
 			        .attr("d", geoPathGenerator)
 			        .attr("fill", d => {
 								// The color will return the shade based on the number its fed
-			          return colorScale(countyMilesPerPerson.get(d.properties.name.toUpperCase().replace("'", "")));
+			          return colorScale(countyMilesPerPerson.get(d.properties.name.toUpperCase()));
 			        })
 			        .on('mousemove', d => {
 									// Define what to do when people move the mouse.
