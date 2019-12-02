@@ -48,6 +48,21 @@ div.tooltip {
 		position: absolute;
 }
 
+a:link {
+  color: #69b060;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #e95e59;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #efca60;
+  text-decoration: none;
+}
+
 .headline {
   text-align: center;
   padding-top: .1em;
@@ -77,7 +92,7 @@ font-size: 1.25em;
 
 .byline {
   font-family: "georgia", sans-serif;
-  font-size: 1.2em;
+  font-size: .95em;
   padding-top: .75em;
 
 }
@@ -105,8 +120,9 @@ font-size: 1.25em;
 }
 
 .caption {
-  font-family: "times new roman", serif;
+  font-family: "georgia", serif;
   font-size: 1em;
+  color: grey;
 }
 
 .stack-image {
@@ -133,6 +149,23 @@ font-size: 1.25em;
   padding-top: 2em;
 }
 
+.svg-container {
+  position: relative;
+}
+
+
 #data-box {
   padding-top: 2em;
+}
+
+#red {
+  color: #e95e59;
+}
+
+#green {
+  color: #69b060;
+}
+
+#yellow {
+  color: #efca60;
 }

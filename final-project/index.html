@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Miles Driven Per Residents Highlights an Evolving Maryland</title>
+  <title>Analysis of Miles Driven Per Resident Highlights an Evolving Maryland</title>
   <meta charset="utf-8">
   <meta name="Viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit-no">
@@ -32,7 +32,7 @@
 
   <!--- Navigation bar --->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Marylander Miles Driven</a>
+    <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,13 +40,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#washington">Washington County<span class="sr-only">(current)</span></a>
+          <a class="nav-link" id="red" href="#washington">Washington County<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#worcester">Worcester County</a>
+        <li class="nav-item yellow">
+          <a class="nav-link" id="yellow" href="#worcester">Worcester County</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#howard">Howard County</a>
+        <li class="nav-item green">
+          <a class="nav-link" id="green" href="#howard">Howard County</a>
         </li>
       </ul>
     </div>
@@ -101,9 +101,10 @@
 <!--- miles driver per resident in 2017 graphic --->
 <div class="row">
   <div class="col-md-8 offset-md-2 pb-md-2 graphic-container">
-     <h2>Queen Anne's, Talbot counties lead Maryland in total miles driven per person in 2017.</h2>
-     <div id="maryland2017"></div>
-     <em class="caption">Source: Maryland Department of Trasnportation State Highway Administration</em>
+     <h2>Miles Driven Per County Resident in Maryland</h2>
+     <p>Queen Anne's County leads Maryland in total miles driven per person in 2017. Baltimore City had the fewest.</p>
+     <div id="d3-container-two" class="svg-container"></div>
+     <em class="caption">Source: Maryland Department of Transportation State Highway Administration</em>
   </div>
 </div>
 <!--- end of graphic --->
@@ -153,7 +154,7 @@
     <h2>Change in Miles Driven Per Resident from 2014 to 2017</h2>
     <p>Worcester, Howard and Frederick Counties saw the largest increases.</p>
     <div id="d3-container" class="svg-container"></div>
-    <em class="caption">Source: Maryland Department of Trasnportation State Highway Administration</em>
+    <em class="caption">Source: Maryland Department of Transportation State Highway Administration</em>
   </div>
 </div>
 <!--- end of graphic --->
@@ -171,7 +172,7 @@
 <div class="row">
   <div class="col-md-8 offset-md-2 pb-md-2">
     <div class="subhead-break">
-      <a name="worcester"><p><b>The county with the highest overall increase</b></a> in the miles driven per resident is Maryland’s only county on the Atlantic Ocean.</p>
+      <a name="worcester"><p><b>Worcester County had the highest overall increase</b></a> in the miles driven per resident. It is also Maryland’s only county on the Atlantic Ocean.</p>
       <p>The extra 2,073 miles driven per resident in 2017 in Worcester County parallels trends showing year-over-year growth for Ocean City as a summer tourist destination. But local economic officials also attribute the increase to expanding sports tourism and weekend events that lure tourists to visit outside of the powerhouse summer months.</p>
       <p>"That's been a very intentional and strategic move," said Melanie Pursel, president and CEO of the Greater Ocean City, Maryland Chamber of Commerce. </p>
       <p>“Just because summer is over doesn't mean you can't come visit Ocean City."</p>
@@ -213,7 +214,7 @@
 <div class="row">
   <div class="col-md-8 offset-md-2 pb-md-2">
     <div class="subhead-break">
-      <a name="howard"><p><b>The second largest increase</b></a> in the number of miles driven per resident is Howard County. The increase of 1,149 miles per resident was also the most of any of the five counties closest to the District of Columbia. The increase in miles driven per resident reflects a growing population – up 12.6% since 2010 according to 2018 Census Bureau estimates – that officials say commute to both Baltimore and Washington, D.C.</p>
+      <a name="howard"><p><b>Howard County had the second largest increase</b></a> in the number of miles driven per resident. The increase of 1,149 miles per resident was also the most of any of the five counties closest to the District of Columbia. The increase in miles driven per resident reflects a growing population – up 12.6% since 2010 according to 2018 Census Bureau estimates – that officials say commute to both Baltimore and Washington, D.C.</p>
       <p>"It just ends up ultimately being a place where people want to reside and raise a family,” said Leonardo McClarty, president of the Howard County Chamber of Commerce.</p>
     </div>
   </div>
@@ -255,8 +256,11 @@
 <div class="container" id="data-box">
   <div class="row">
     <div class="col-md-8 offset-md-2 data">
-      <h3>About the data</h3>
-      <p class="small-font">The data for this story was compiled by the Capital News Service from the Census Bureau and the Maryland Department of Transportation State Highway Administration. The traffic data is logged as part of the state’s traffic monitoring system. The system includes 87 permanent automatic traffic recording devices and 8,850 locations that are tracked for 48 hours on three and six-year cycles. Population data is from the Census Bureau 2017 American Community Survey. The data used and the methodology employed can be found <a href="https://github.com/ryanelittle/Little-Ryan-JOUR652/tree/master/maryland-miles-driven" target="_blank">here.</a></p>
+      <h3>About This Story</h3>
+      <p class="small-font">The data for this story was compiled by the Capital News Service from the Census Bureau and the Maryland Department of Transportation State Highway Administration. The traffic data is logged as part of the state’s traffic monitoring system. The system includes 87 permanent automatic traffic recording devices and 8,850 locations that are tracked for 48 hours on three and six-year cycles. Population data is from the Census Bureau 2017 American Community Survey.
+        <br>The data used and the methodology employed can be found <a href="https://github.com/ryanelittle/Little-Ryan-JOUR652/tree/master/maryland-miles-driven" target="_blank">here.</a>
+        <br>
+        <br>Traffic light icon and images from <a href="http://www.shutterstock.com" target="_blank">Shutterstock.</a> JavaScript maps coded using <a href="https://d3js.org/" target="_blank">D3.js</a>. Storymap created using Northwestern University Knight Lab's<a href="https://storymap.knightlab.com/" target="_blank">StorymapJS.</a></p>
     </div>
   </div>
 </div>
@@ -266,54 +270,17 @@
 </div>
 
 
-<script>
-var chart2 = c3.generate({
-    bindto: '#maryland2017',
-    data: {
-      columns: [
-        ["'Queen Anne's County", 20513],
-        ['Talbot County', 17478],
-        ['Garrett County', 17018],
-        ['Worcester County', 16545],
-        ['Howard County', 15446],
-        ['Washington County', 14344],
-        ['Frederick County', 14223],
-        ['Cecil County', 13292],
-        ['Caroline County', 12498],
-        ['Anne Arundel County', 11747],
-        ['Dorchester County', 11738],
-        ['Allegany County', 11254],
-        ["Prince George's County", 10999],
-        ['Baltimore County', 10920],
-        ['Harford County', 10709],
-        ['Somerset County', 10640],
-        ['Kent County', 	10441],
-        ['Wicomico County', 10418],
-        ["St. Mary's County", 	9374],
-        ['Charles County', 	9165],
-        ['Calvert County', 8647],
-        ['Montgomery County', 8333],
-        ['Carroll County', 7972],
-        ['Baltimore City', 5803]
-      ],
-      type: 'bar'
-    },
-    color: {
-      pattern: ['#800000', '#8B0000', '	#A52A2A', '#B22222', '#DC143C', '#FF6347', '#FF7F50', '#CD5C5C', '#F08080', '#E9967A', '#FA8072', '#FFA07A', '#FF4500', '#FF8C00', '#FFA500', '#FFD700', '#B8860B', '#DAA520', '#EEE8AA', '#BDB76B', '#F0E68C', '#808000', '#FFFF00', '#9ACD32']
-    },
-    tooltip: {
-      show: false
-    }
-  });
-</script>
-
-<script>
 <!--- d3.map -->
+<script>
   var w = 600;
   var h = 400;
   var formatComma = d3.format(","),
       formatSuffix = d3.format("s")
-  var svg = d3.select("div#d3-container")
+  var change = d3.select("div#d3-container")
+              .append("svg")
+              .attr("width", w)
+              .attr("height", h);
+  var keyword = d3.select("div#d3-container-two")
               .append("svg")
               .attr("width", w)
               .attr("height", h);
@@ -323,32 +290,40 @@ var chart2 = c3.generate({
                      .center([-77.4,38.8]);
   var geoPathGenerator = d3.geoPath()
                .projection(projection);
+  var countyRateOfChange = d3.map();
   var countyMilesPerPerson = d3.map();
+  var county = d3.map();
   var colorScale = d3.scaleThreshold()
                   .domain([100, 500, 1000, 1500])
                   .range(d3.schemeYlOrRd[4]);
+  var colorScaleTwo = d3.scaleThreshold()
+                  .domain([5000, 7500, 10000, 12500, 15000, 17500, 20000])
+                  .range(d3.schemeYlOrRd[7]);
   var maryland = d3.json("https://raw.githubusercontent.com/frankrowe/maryland-geojson/master/maryland-counties.geojson");
+  var countyRateofChangeData = d3.csv("https://raw.githubusercontent.com/ryanelittle/Little-Ryan-JOUR652/master/dataviz/miles-per-person.csv", function(d) {
+       countyRateOfChange.set(d.county, d.both_rate_change)
+  });
   var countyMilesPerPersonData = d3.csv("https://raw.githubusercontent.com/ryanelittle/Little-Ryan-JOUR652/master/dataviz/miles-per-person.csv", function(d) {
-      countyMilesPerPerson.set(d.county, d.both_rate_change)
+       countyMilesPerPerson.set(d.county, d.both_miles_per_person_2017)
   });
   var tooltip = d3.select('#d3-container').append('div')
                   .attr('class', 'hidden tooltip');
-    Promise.all([maryland, countyMilesPerPersonData]).then(function(values){
-        svg.selectAll("path")
+    Promise.all([maryland, countyRateofChangeData]).then(function(values){
+        change.selectAll("path")
             .data(values[0].features)
             .enter()
             .append("path")
             .attr("class","county")
             .attr("d", geoPathGenerator)
             .attr("fill", d => {
-              return colorScale(countyMilesPerPerson.get(d.properties.name.toUpperCase()));
+              return colorScale(countyRateOfChange.get(d.properties.name.toUpperCase()));
             })
             .on('mousemove', d => {
-                var mouse = d3.mouse(svg.node()).map( d => parseInt(d) );
+                var mouse = d3.mouse(change.node()).map( d => parseInt(d) );
                 tooltip.classed('hidden', false)
-                  .attr('style', `left:${mouse[0] + 15}px; top: ${mouse[1] - 35}px;`)
+            .attr('style', `left:${mouse[0] + 15}px; top: ${mouse[1] - 35}px;`)
                   .html(`
-                    ${d.properties.name.toUpperCase()} COUNTY: ${countyMilesPerPerson.get(d.properties.name.toUpperCase())}
+                                        ${d.properties.name.toUpperCase()} COUNTY: ${countyRateOfChange.get(d.properties.name.toUpperCase())}
                     `
                   );
 
@@ -357,6 +332,33 @@ var chart2 = c3.generate({
                 tooltip.classed('hidden', true);
             });
       });
+      var tooltip2 = d3.select('#d3-container-two').append('div')
+                      .attr('class', 'hidden tooltip');
+        Promise.all([maryland, countyMilesPerPerson]).then(function(values){
+            keyword.selectAll("path")
+                .data(values[0].features)
+                .enter()
+                .append("path")
+                .attr("class","county")
+                .attr("d", geoPathGenerator)
+                .attr("fill", d => {
+                  // console.log(countyMilesPerPerson.get(d.properties.name.toUpperCase()))
+                  return colorScaleTwo(countyMilesPerPerson.get(d.properties.name.toUpperCase()).replace(",", ""));
+                })
+                .on('mousemove', d => {
+                    var mouse = d3.mouse(keyword.node()).map( d => parseInt(d) );
+                    tooltip2.classed('hidden', false)
+                    .attr('style', `left:${mouse[0] + 15}px; top: ${mouse[1] - 35}px;`)
+                      .html(`
+                        ${d.properties.name.toUpperCase()} COUNTY: ${countyMilesPerPerson.get(d.properties.name.toUpperCase())}
+                        `
+                      );
+
+                })
+                .on('mouseout', () => {
+                    tooltip2.classed('hidden', true);
+                });
+          });
 
 </script>
 
