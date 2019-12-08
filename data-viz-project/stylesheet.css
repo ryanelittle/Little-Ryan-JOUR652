@@ -1,16 +1,29 @@
 h1 {
-  font-family: helvetica, sans-serif;
-  font-size: 2em;
+  font-family: 'roboto', sans-serif;
+  font-size: 2.5em;
 }
 
 h2 {
-  font-family: roboto, sans-serif;
-  font-size: 1.5em;
+  font-family: 'roboto', sans-serif;
+  font-size: 1.75em;
+}
+
+h3 {
+  font-family: 'roboto', sans-serif;
+  font-size: 1.25em;
+}
+
+h4 {
+  font-family: 'georgia', serif;
+  font-size: 1.4em;
+  font-weight: 400;
+  padding-top: .75em;
 }
 
 p {
-  font-family: "times new roman", serif;
-  font-size: 1.2em;
+  font-family: "georgia", serif;
+  font-size: 1.4em;
+  line-height: 1.35em;
 }
 
 footer {
@@ -21,8 +34,38 @@ footer {
   padding: 1em 0 1em 0;
 }
 
+b {
+  font-weight: bolder;
+}
+
+div.tooltip {
+		color: #222;
+		background-color: #fff;
+		padding: .5em;
+		text-shadow: #f5f5f5 0 1px 0;
+		border-radius: 2px;
+		opacity: 0.9;
+		position: absolute;
+}
+
+a:link {
+  color: #69b060;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #e95e59;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #efca60;
+  text-decoration: none;
+}
+
 .headline {
   text-align: center;
+  padding-top: .1em;
 }
 
 .image-break {
@@ -30,13 +73,108 @@ footer {
 }
 
 .subhead-break{
-  margin: .66em 0 0 0;
+  margin: 1em 0 0 0;
 }
 
 .paragraph-break{
   margin: 0 0 1em 0;
 }
 
-.container {
-  float: left;
+.bg-dark {
+background:#000 !important;
+}
+
+.navbar {
+font-family: 'roboto', sans-serif;
+color: white;
+font-size: 1.25em;
+}
+
+.byline {
+  font-family: "georgia", sans-serif;
+  font-size: .95em;
+  padding-top: .75em;
+
+}
+
+.county {
+	stroke: #fff;
+	stroke-width: 0.5;
+}
+
+.hidden {
+		display: none;
+}
+
+.graphic-container {
+  padding-top:30px;
+  padding-bottom:30px;
+  border-top:1px solid #cdcdcd;
+  border-bottom:1px solid #cdcdcd;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #444;
+}
+
+.hero-caption {
+  font-family: "georgia", serif;
+  font-size: 1em;
+  color: grey;
+}
+
+.caption {
+  font-family: "georgia", serif;
+  font-size: 1em;
+  color: grey;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.stack-image {
+  width:100%;
+  max-width:900px;
+  margin: auto;
+  padding-top:30px;
+  display: block;
+}
+
+.data {
+  background-color: #f9f9f9;
+  padding-top: 1em;
+}
+
+.small-font {
+  font-size: 1em;
+}
+
+.stoplight {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2em;
+}
+
+.svg-container {
+  position: relative;
+}
+
+
+#data-box {
+  padding-top: 2em;
+}
+
+#red {
+  color: #e95e59;
+}
+
+#green {
+  color: #69b060;
+}
+
+#yellow {
+  color: #efca60;
 }

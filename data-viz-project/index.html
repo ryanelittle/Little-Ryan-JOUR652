@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <title>Hello world</title>
+  <title>Analysis of Miles Driven Per Resident Highlights an Evolving Maryland</title>
   <meta charset="utf-8">
   <meta name="Viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit-no">
   <meta name="description"
-  content="Merrill College of Journalism, UMD">
+  content="Data analysis by the Capital News Service">
   <meta name="author"
   content="Ryan E. Little">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,66 +23,53 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.8/c3.min.js"></script>
 
  <!-- Loading Google font --->
- <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
- <!-- Load c3.css -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.css" rel="stylesheet">
-
-  <!-- Load d3.js and c3.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.min.js" charset="utf-8"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
 
 </head>
 
 
 <body>
 
-<!--- Navigation bar --->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <!--- Navigation bar --->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-<!--- End navigation bar --->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" id="red" href="#washington">Washington County<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item yellow">
+          <a class="nav-link" id="yellow" href="#worcester">Worcester County</a>
+        </li>
+        <li class="nav-item green">
+          <a class="nav-link" id="green" href="#howard">Howard County</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--- End navigation bar --->
 
 <!--- Start content container --->
 <div class="container pb-md-5">
 
+<!--- Start icon insert --->
+<div class="row">
+  <div class="col-md-10 offset-md-1 ">
+    <figure><img src="images/stoplight.jpg" class="stoplight"></figure>
+  </div>
+</div>
+<!--- End icon insert --->
+
 <!--- Start headline --->
 <div class="row">
   <div class="col-md-8 offset-md-2 headline">
-    <h1>Headline element (h1)</h1>
-    <div class="byline">By Name Here</div>
+    <h1>Traffic and Population</h1>
+    <h4>A new analysis of the miles driven in Maryland highlights an evolving Maryland.</h4>
+    <div class="byline">By Ryan E. Little</div>
   </div>
 </div>
 <!--- End headline --->
@@ -90,21 +77,61 @@
 <!--- Start image component --->
 <div class="row">
   <div class="col-md-12 image-break">
-    <figure>
-      <img class="img-fluid" src="http://placekitten.com/1200/600"/>
-        <figcaption>
-        This is a caption placeholder.
-        </figcaption>
-      </figure>
-    </div>
+    <figure><img class="img-fluid" src="images/beltway.jpg"/>
+    <figcaption class="hero-caption"> Rush hour traffic builds up along the Capital Beltway during sunset on March 10, 2019. (Photo from Shutterstock)</figcaption>
+    </figure>
   </div>
+</div>
 <!--- End image component --->
 
 <!--- Start body column --->
 <div class="row">
   <div class="col-md-8 offset-md-2">
-    <h2 class="subhead-break">Heading 2</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="subhead-break">
+      <p>The stop and go in Maryland isn’t going anywhere. The number of miles driven is not only increasing, it’s increasing most in urban parts of the state that are already considered some of the most congested places in the country.</p>
+      <p>But a new data analysis of the miles logged on Maryland roads highlights a Washington County that is becoming more urban, growing numbers of tourists visiting Worcester County and an expanding bedroom community in Howard County that commutes to both major Maryland metro areas.</p>
+      <p>For this analysis, the Capital News Service compared the miles driven in each Maryland county with 2017 population estimates from the Census Bureau.</p>
+      <p>The county with the most miles driven per resident? That bottleneck is Queen Anne’s County, home of the Chesapeake Bay Bridge. The bridge acts as a gateway to the eastern shore of Maryland for Washington and Baltimore. About 74,000 cars drive across the bridge daily, according to the Maryland Department of Transportation State Highway Administration.</p>
+    </div>
+  </div>
+</div>
+<!--- End body column --->
+
+<!--- miles driver per resident in 2017 graphic --->
+<div class="row">
+  <div class="col-md-8 offset-md-2 pb-md-2 graphic-container">
+     <h2>Miles Driven Per County Resident in Maryland</h2>
+     <p>Queen Anne's County leads Maryland in total miles driven per person in 2017. Baltimore City had the fewest.</p>
+     <div id="d3-container-two" class="svg-container"></div>
+     <em class="caption">Source: Maryland Department of Transportation State Highway Administration</em>
+  </div>
+</div>
+<!--- end of graphic --->
+
+<!--- Start icon insert --->
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <figure><img src="images/stoplight.jpg" class="stoplight"></figure>
+  </div>
+</div>
+<!--- End icon insert --->
+
+<!--- Start body column --->
+<div class="row">
+  <div class="col-md-8 offset-md-2 pb-md-2">
+    <div class="subhead-break">
+      <a name="washington"><p><b>Miles driven on Washington County roads</b></a> is moving to urban roads. Urban miles driven there has increased by 834 miles per resident between 2014 and 2017. That is the third highest increase of any Maryland County. Paired with the largest decrease in miles driven per resident on rural roads for any county in Maryland, the data shows a county undergoing a metamorphosis.</p>
+    </div>
+  </div>
+</div>
+<!--- End body column --->
+
+<!--- Start body column --->
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <figure><img src="images/hagerstown.jpg" class="stack-image">
+    <figcaption class="caption"> Downtown Hagerstown, Md. Date photo was taken is unknown. (Photo from Shutterstock)</figcaption>
+    </figure>
   </div>
 </div>
 <!--- End body column --->
@@ -112,8 +139,129 @@
 <!--- Start body column --->
 <div class="row">
   <div class="col-md-8 offset-md-2 pb-md-2">
-    <h2 class="subhead-break">Heading 2</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="subhead-break">
+      <p>"I think it's a transformative time for Hagerstown, especially in the area of downtown development," said Jill Thompson, the director of community and economic development for the city of Hagerstown.</p>
+      <p>The city is five years into a 10-year comprehensive plan to redevelop its downtown, which includes new classrooms for the University System of Maryland at Hagerstown and expanding the Maryland Theatre. The emphasis on education and entertainment, paired with new federal and state economic development incentives, have begun to alter the core landscape.</p>
+      <p>"That's creating a demand for downtown living and the growth of renovated apartments for students as well as people who want to have that ‘downtown experience,’" Thompson said.</p>
+    </div>
+  </div>
+</div>
+<!--- End body column --->
+
+<!--- miles driver per resident change between 2014 to 2017 graphic --->
+<div class="row">
+  <div class="col-md-8 offset-md-2 pb-md-2 graphic-container">
+    <h2>Change in Miles Driven Per Resident from 2014 to 2017</h2>
+    <p>Worcester, Howard and Frederick counties saw the largest increases.</p>
+    <div id="d3-container" class="svg-container"></div>
+    <em class="caption">Source: Maryland Department of Transportation State Highway Administration</em>
+  </div>
+</div>
+<!--- end of graphic --->
+
+<!--- Start icon insert --->
+  <div class="row">
+    <div class="col-md-10 offset-md-1 ">
+      <figure><img src="images/stoplight.jpg" class="stoplight"></figure>
+    </div>
+  </div>
+
+<!--- End icon insert --->
+
+<!--- Start body column --->
+<div class="row">
+  <div class="col-md-8 offset-md-2 pb-md-2">
+    <div class="subhead-break">
+      <a name="worcester"><p><b>Worcester County had the highest overall increase</b></a> in the miles driven per resident. It is also Maryland’s only county on the Atlantic Ocean.</p>
+      <p>The extra 2,073 miles driven per resident in 2017 in Worcester County parallels trends showing year-over-year growth for Ocean City as a summer tourist destination. But local economic officials also attribute the increase to expanding sports tourism and weekend events that lure tourists to visit outside of the powerhouse summer months.</p>
+      <p>"That's been a very intentional and strategic move," said Melanie Pursel, president and CEO of The Greater Ocean City, Maryland Chamber of Commerce. </p>
+      <p>“Just because summer is over doesn't mean you can't come visit Ocean City."</p>
+    </div>
+  </div>
+</div>
+<!--- End body column --->
+
+<!--- Start body column --->
+<div class="row">
+  <div class="col-md-10 offset-md-1 ">
+    <figure><img src="images/ocean-city.jpg" class="stack-image"></figure>
+    <figcaption class="caption"> A crowded resort beach in Ocean City, Md. on June 16, 2018. (Photo from Shutterstock)</figcaption>
+  </div>
+</div>
+<!--- End body column --->
+
+<!--- Start body column --->
+<div class="row">
+  <div class="col-md-8 offset-md-2 pb-md-2">
+    <div class="subhead-break">
+      <p>The “second season” idea isn’t new. The outdoor fair and music festival  SunFest began 45 years ago as a way to extend the season that is generally considered to run from Memorial Day to Labor Day to the end of September. Now, events like Harbor Day at the Docks, the Seaside 10 Miler and Oktoberfests in Berlin and Snow Hill help drive traffic through the end of October.</p>
+      <p>An emphasis on sporting events is also driving traffic. The United States Specialty Sports Association hosts its East National Championship in neighboring Wicomico County, but most of the teams stay in Worcester County, said Susan Jones, executive director of the Ocean City Hotel-Motel-Restaurant Association. The July tournament has grown from 30 teams to more than 400 in recent years.</p>
+    </div>
+  </div>
+</div>
+<!--- End body column --->
+
+<!--- Start icon insert --->
+  <div class="row">
+    <div class="col-md-10 offset-md-1 ">
+      <figure><img src="images/stoplight.jpg" class="stoplight"></figure>
+    </div>
+  </div>
+
+<!--- End icon insert --->
+
+<!--- Start body column --->
+<div class="row">
+  <div class="col-md-8 offset-md-2 pb-md-2">
+    <div class="subhead-break">
+      <a name="howard"><p><b>Howard County had the second largest increase</b></a> in the number of miles driven per resident. The increase of 1,149 miles per resident was also the most of any of the five counties closest to the District of Columbia. The increase in miles driven per resident reflects a growing population – up 12.6% since 2010 according to 2018 Census Bureau estimates – that officials say commute to both Baltimore and Washington, D.C.</p>
+      <p>"It just ends up ultimately being a place where people want to reside and raise a family,” said Leonardo McClarty, president of the Howard County Chamber of Commerce.</p>
+    </div>
+  </div>
+</div>
+<!--- End body column --->
+
+<!--- Start body column --->
+<div class="row">
+  <div class="col-md-10 offset-md-1 ">
+    <figure><img src="images/ellicot-city.jpg" class="stack-image"></figure>
+    <figcaption class="caption">An aerial perspective of Ellicott City's historic downtown in Howard County on Nov. 22, 2017. (Photo from Shutterstock)</figcaption>
+  </div>
+</div>
+<!--- End body column --->
+
+<!--- Start body column --->
+<div class="row">
+  <div class="col-md-8 offset-md-2 pb-md-2">
+    <div class="subhead-break">
+      <p>But there’s probably one other factor that contributes to the high miles in Howard County.</p>
+      <p>"In all honesty, we don't have a robust public transportation system,” McClarty said. “If you live or work in Howard County, more often or not, you have to have access to (a car).</p>
+      <p>"As a result, I think that also lends itself to more cars on the road."
+    </div>
+  </div>
+</div>
+<!--- End body column --->
+
+<!--- Start image component --->
+<div class="row">
+  <div class="col-md-12 image-break">
+    <figure>
+<iframe src="https://uploads.knightlab.com/storymapjs/eca8144209344de929778d2311ffef0a/maryland-traffic/index.html" frameborder="0" width="100%" height="800"></iframe>
+      </figure>
+    </div>
+  </div>
+<!--- End image component --->
+
+<!--- Start body column --->
+<div class="container" id="data-box">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 data">
+      <h3>About This Story</h3>
+      <p class="small-font">The data for this story was compiled by the Capital News Service from the Census Bureau and the Maryland Department of Transportation State Highway Administration. The traffic data is logged as part of the state’s traffic monitoring system. The system includes 87 permanent automatic traffic recording devices and 8,850 locations that are tracked for 48 hours on three and six-year cycles. Population data is from the Census Bureau 2017 American Community Survey.
+        <br>The data used and the methodology employed can be found <a href="https://github.com/ryanelittle/Little-Ryan-JOUR652/tree/master/maryland-miles-driven" target="_blank">here.</a>
+        <br>
+        <br>Traffic light icon and images from <a href="http://www.shutterstock.com" target="_blank">Shutterstock.</a> JavaScript maps coded using <a href="https://d3js.org/" target="_blank">D3.js</a>. Storymap created using Northwestern University Knight Lab's<a href="https://storymap.knightlab.com/" target="_blank"> StorymapJS.</a></p>
+    </div>
   </div>
 </div>
 <!--- End body column --->
@@ -121,92 +269,98 @@
 <!--- End content container --->
 </div>
 
-<!--- pie chart --->
-<div class="graphic-container">
-  <h2>What race are school shooters likely to be?</h2>
-  <div id="piechart"></div>
-  <em>Source: Data collected by The Washington Post</em>
- </div>
 
-<!-- bar chart-->
-<div class="graphic-container">
- <h2>Where do school shootings occur?</h2>
- <div id="barchart"></div>
- <em>Source: Data collected by The Washington Post</em>
-</div>
-
-<!-- line chart-->
-<div class="graphic-container">
- <h2>Examining the carnage.</h2>
- <div id="linechart"></div>
- <em>Source: Data collected by The Washington Post</em>
-</div>
-
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-<!-- c3 script-->
-  <script type="text/javascript">
-  //CHART 1
-  var chart = c3.generate({
-    bindto: '#linechart',
-    data: {
-      x: 'x',
-      columns: [
-        ['x', 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
-        ['Fatalities', 14, 4, 5, 1, 5, 3, 9, 9, 1, 5, 1, 3, 2, 32, 3, 6, 0, 2, 5, 21],
-        ['Injuries', 35, 3, 22, 7, 7, 9, 17, 16, 17, 5, 4, 6, 9, 8, 13, 14, 2, 18, 15, 44],
-        ['Number of incidents', 7, 12, 13, 5, 11, 9, 13, 15, 10, 9, 9, 9, 7, 11, 13, 16, 7, 13, 14, 12],
-      ]
-    },
-    color: {
-      pattern: ['#ff0000', '#455380', '#ee6a4b', '#60c4b2', '#973895']
-    }
+<!--- d3.map -->
+<script>
+  var w = 600;
+  var h = 400;
+  var formatComma = d3.format(","),
+      formatSuffix = d3.format("s")
+  var change = d3.select("div#d3-container")
+              .append("svg")
+              .attr("width", w)
+              .attr("height", h);
+  var keyword = d3.select("div#d3-container-two")
+              .append("svg")
+              .attr("width", w)
+              .attr("height", h);
+  var projection = d3.geoMercator()
+                     .translate([w/2, h/2])
+                     .scale(7500)
+                     .center([-77.4,38.8]);
+  var geoPathGenerator = d3.geoPath()
+               .projection(projection);
+  var countyRateOfChange = d3.map();
+  var countyMilesPerPerson = d3.map();
+  var county = d3.map();
+  var colorScale = d3.scaleThreshold()
+                  .domain([100, 500, 1000, 1500])
+                  .range(d3.schemeYlOrRd[4]);
+  var colorScaleTwo = d3.scaleThreshold()
+                  .domain([5000, 7500, 10000, 12500, 15000, 17500, 20000])
+                  .range(d3.schemeYlOrRd[7]);
+  var maryland = d3.json("https://raw.githubusercontent.com/frankrowe/maryland-geojson/master/maryland-counties.geojson");
+  var countyRateofChangeData = d3.csv("https://raw.githubusercontent.com/ryanelittle/Little-Ryan-JOUR652/master/dataviz/miles-per-person.csv", function(d) {
+       countyRateOfChange.set(d.county, d.both_rate_change)
   });
-  //chart 2
-  var chart2 = c3.generate({
-      bindto: '#barchart',
-      data: {
-        columns: [
-          ['City', 101],
-          ['Suburb', 48],
-          ['Town', 24],
-          ['Rural', 31],
-        ],
-        type: 'bar'
-      },
-      color: {
-        pattern: ['#2a8dc5', '#455380', '#ee6a4b', '#60c4b2', '#973895', '#fae255', '#af3d46', '#f8bb63', '#818281']
-      }
-    });
-    // chart 3
-    var chart3 = c3.generate({
-      bindto: '#piechart',
-      data: {
-        // iris data from R
-        columns: [
-          ['Asian', 1],
-          ['American Indian', 3],
-          ['Black', 35],
-          ['Hispanic', 6],
-          ['White', 60],
-        ],
-        type : 'pie',
-        onclick: function (d, i) { console.log("onclick", d, i); },
-        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-      },
-      color: {
-        pattern: ['#2a8dc5', '#455380', '#ee6a4b', '#60c4b2', '#973895']
-      }
-    });
-</script>
+  var countyMilesPerPersonData = d3.csv("https://raw.githubusercontent.com/ryanelittle/Little-Ryan-JOUR652/master/dataviz/miles-per-person.csv", function(d) {
+       countyMilesPerPerson.set(d.county, d.both_miles_per_person_2017)
+  });
+  var tooltip = d3.select('#d3-container').append('div')
+                  .attr('class', 'hidden tooltip');
+    Promise.all([maryland, countyRateofChangeData]).then(function(values){
+        change.selectAll("path")
+            .data(values[0].features)
+            .enter()
+            .append("path")
+            .attr("class","county")
+            .attr("d", geoPathGenerator)
+            .attr("fill", d => {
+              return colorScale(countyRateOfChange.get(d.properties.name.toUpperCase()));
+            })
+            .on('mousemove', d => {
+                var mouse = d3.mouse(change.node()).map( d => parseInt(d) );
+                tooltip.classed('hidden', false)
+            .attr('style', `left:${mouse[0] + 15}px; top: ${mouse[1] - 35}px;`)
+                  .html(`
+                                        ${d.properties.name.toUpperCase()} COUNTY: ${countyRateOfChange.get(d.properties.name.toUpperCase())}
+                    `
+                  );
 
-</body>
+            })
+            .on('mouseout', () => {
+                tooltip.classed('hidden', true);
+            });
+      });
+      var tooltip2 = d3.select('#d3-container-two').append('div')
+                      .attr('class', 'hidden tooltip');
+        Promise.all([maryland, countyMilesPerPerson]).then(function(values){
+            keyword.selectAll("path")
+                .data(values[0].features)
+                .enter()
+                .append("path")
+                .attr("class","county")
+                .attr("d", geoPathGenerator)
+                .attr("fill", d => {
+                  // console.log(countyMilesPerPerson.get(d.properties.name.toUpperCase()))
+                  return colorScaleTwo(countyMilesPerPerson.get(d.properties.name.toUpperCase()).replace(",", ""));
+                })
+                .on('mousemove', d => {
+                    var mouse = d3.mouse(keyword.node()).map( d => parseInt(d) );
+                    tooltip2.classed('hidden', false)
+                    .attr('style', `left:${mouse[0] + 15}px; top: ${mouse[1] - 35}px;`)
+                      .html(`
+                        ${d.properties.name.toUpperCase()} COUNTY: ${countyMilesPerPerson.get(d.properties.name.toUpperCase())}
+                        `
+                      );
+
+                })
+                .on('mouseout', () => {
+                    tooltip2.classed('hidden', true);
+                });
+          });
+
+</script>
 
 <footer>
 <div class="feet">Copyright 2019. Ryan E. Little.</div>
